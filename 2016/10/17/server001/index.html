@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="svn," />
 
 
 
@@ -84,15 +84,24 @@
 
 
 
-<meta name="description" content="一个对好玩的技术保持着三分种热度的坚持者,七分在想其他技术资讯的爱好者.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="那些事儿">
-<meta property="og:url" content="http://www.taoring.com/index.html">
+<meta name="description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录
+svn服务器原理首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务器应用之-svn构建">
+<meta property="og:url" content="http://www.taoring.com/2016/10/17/server001/index.html">
 <meta property="og:site_name" content="那些事儿">
-<meta property="og:description" content="一个对好玩的技术保持着三分种热度的坚持者,七分在想其他技术资讯的爱好者.">
+<meta property="og:description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录
+svn服务器原理首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者">
+<meta property="og:image" content="http://www.taoring.com/images/assets/2.png">
+<meta property="og:image" content="http://www.taoring.com/images/assets/3.png">
+<meta property="og:image" content="http://www.taoring.com/images/assets/4.png">
+<meta property="og:image" content="http://www.taoring.com/images/assets/5.png">
+<meta property="og:updated_time" content="2016-10-18T15:56:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="那些事儿">
-<meta name="twitter:description" content="一个对好玩的技术保持着三分种热度的坚持者,七分在想其他技术资讯的爱好者.">
+<meta name="twitter:title" content="服务器应用之-svn构建">
+<meta name="twitter:description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录
+svn服务器原理首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者">
+<meta name="twitter:image" content="http://www.taoring.com/images/assets/2.png">
 
 
 
@@ -113,10 +122,10 @@
 
 
 
-  <link rel="canonical" href="http://www.taoring.com/"/>
+  <link rel="canonical" href="http://www.taoring.com/2016/10/17/server001/"/>
 
 
-  <title> 那些事儿 </title>
+  <title> 服务器应用之-svn构建 | 那些事儿 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -137,9 +146,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -246,9 +253,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -268,10 +275,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/10/17/server001/" itemprop="url">
-                  服务器应用之-svn构建
-                </a>
+                服务器应用之-svn构建
               
             
           </h1>
@@ -337,9 +341,7 @@
       
 
       
-        
-          
-            <p>有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.<br>svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?<br>自己一直对command式的也非常好奇,现在test并记录</p>
+        <p>有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.<br>svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?<br>自己一直对command式的也非常好奇,现在test并记录</p>
 <h1 id="svn服务器原理"><a href="#svn服务器原理" class="headerlink" title="svn服务器原理"></a>svn服务器原理</h1><p>首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者需要理解配合的深刻含义，这种提高项目效率的同时也是在互相进步</p>
 <p><a href="https://my.oschina.net/1462469/blog/267035" target="_blank" rel="external">翻他牌</a></p>
 <p>那么我最初是在何时接触svn的呢,那是在2007年的,当时用的还是vs2005的vss2005版本,与几个后端配合提交版本,只不过,我提交的是设计稿及html+css样式+js<br>这时才发现前后端分离是多么的方便,至少前后配合初型已经是这样子<br>对于svn服务器理解可以看如下图:<br><img src="/images/assets/2.png" alt=""><br>简单的表述,一台server(任何一台电脑,只要硬件可以作为服务器)<br>那么这边有3台,A,B,C,从server提交又获取,使得这三台,可以在server上获取其他二台提交的一些信息,另外还可以版本比较merge合并,很神奇的东西</p>
@@ -383,282 +385,78 @@
 <p>若出现No such process,那说明没找到进程序号</p>
 <p>或者直接killall svnserve,也可以</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/17/work001/" itemprop="url">
-                  遇到哪些事儿之—百事挑赞
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-17T00:33:52+08:00" content="2016-10-17">
-              2016-10-17
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/17/work001/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/17/work001/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/svn/" rel="tag">#svn</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h1 id="百事可乐-百事挑赞"><a href="#百事可乐-百事挑赞" class="headerlink" title="百事可乐,百事挑赞"></a>百事可乐,百事挑赞</h1><p>针对现时尚年轻人喜欢玩的创意,与明星挑赞的互动,landingpage<br><img src="/images/work/pepsi/0.gif" alt=""></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/17/work001/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/17/work001/" rel="next" title="遇到哪些事儿之—百事挑赞">
+                <i class="fa fa-chevron-left"></i> 遇到哪些事儿之—百事挑赞
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/15/hello-world/" itemprop="url">
-                  那就从HelloWorld开始
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-15T00:36:18+08:00" content="2016-10-15">
-              2016-10-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/15/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h2 id="纠结"><a href="#纠结" class="headerlink" title="纠结"></a>纠结</h2><p>blog？要不要再续博</p>
-<p>这个…</p>
-<p>跟一个技术小伙伴闲聊时,提到用hexo,说是blog神器,很热情,把他的热博link发我,我一看蛮好的,哎…,兴致来了,呵呵<br>这个对于一个已经很多年没在写blog的人来说,是有点那种久违的感觉,<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/15/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/10/17/server001/"
+     data-title="服务器应用之-svn构建"
+     data-content=""
+     data-url="http://www.taoring.com/2016/10/17/server001/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -666,6 +464,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/17/server001/"
+           data-title="服务器应用之-svn构建" data-url="http://www.taoring.com/2016/10/17/server001/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -685,8 +491,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/assets/logo.jpg"
@@ -736,6 +551,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#svn服务器原理"><span class="nav-number">1.</span> <span class="nav-text">svn服务器原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统环境选择svn搭建"><span class="nav-number">2.</span> <span class="nav-text">系统环境选择svn搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mac-os"><span class="nav-number">2.0.1.</span> <span class="nav-text">mac os</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来-使用command式客户端"><span class="nav-number">2.0.2.</span> <span class="nav-text">接下来,使用command式客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从服务器端下载代码到客户端本地"><span class="nav-number">2.0.3.</span> <span class="nav-text">从服务器端下载代码到客户端本地</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交更改过的代码到服务器"><span class="nav-number">2.0.4.</span> <span class="nav-text">提交更改过的代码到服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新服务器端的代码到客户端"><span class="nav-number">2.0.5.</span> <span class="nav-text">更新服务器端的代码到客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不想用了-就关闭svn服务器"><span class="nav-number">2.0.6.</span> <span class="nav-text">不想用了,就关闭svn服务器</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -832,6 +658,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
