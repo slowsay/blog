@@ -84,23 +84,20 @@
 
 
 
-<meta name="description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录
-svn服务器原理首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者">
+<meta name="description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器应用之-svn构建">
 <meta property="og:url" content="http://www.taoring.com/2016/10/17/server001/index.html">
 <meta property="og:site_name" content="那些事儿">
-<meta property="og:description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录
-svn服务器原理首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者">
+<meta property="og:description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录">
 <meta property="og:image" content="http://www.taoring.com/images/assets/2.png">
 <meta property="og:image" content="http://www.taoring.com/images/assets/3.png">
 <meta property="og:image" content="http://www.taoring.com/images/assets/4.png">
 <meta property="og:image" content="http://www.taoring.com/images/assets/5.png">
-<meta property="og:updated_time" content="2016-10-18T15:56:49.000Z">
+<meta property="og:updated_time" content="2016-10-18T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器应用之-svn构建">
-<meta name="twitter:description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录
-svn服务器原理首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者">
+<meta name="twitter:description" content="有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?自己一直对command式的也非常好奇,现在test并记录">
 <meta name="twitter:image" content="http://www.taoring.com/images/assets/2.png">
 
 
@@ -341,7 +338,7 @@ svn服务器原理首先咱们不懂,先了解下,svn服务器的原理,对于�
       
 
       
-        <p>有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.<br>svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?<br>自己一直对command式的也非常好奇,现在test并记录</p>
+        <p>有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.<br>svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?<br>自己一直对command式的也非常好奇,现在test并记录<br><a id="more"></a></p>
 <h1 id="svn服务器原理"><a href="#svn服务器原理" class="headerlink" title="svn服务器原理"></a>svn服务器原理</h1><p>首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者需要理解配合的深刻含义，这种提高项目效率的同时也是在互相进步</p>
 <p><a href="https://my.oschina.net/1462469/blog/267035" target="_blank" rel="external">翻他牌</a></p>
 <p>那么我最初是在何时接触svn的呢,那是在2007年的,当时用的还是vs2005的vss2005版本,与几个后端配合提交版本,只不过,我提交的是设计稿及html+css样式+js<br>这时才发现前后端分离是多么的方便,至少前后配合初型已经是这样子<br>对于svn服务器理解可以看如下图:<br><img src="/images/assets/2.png" alt=""><br>简单的表述,一台server(任何一台电脑,只要硬件可以作为服务器)<br>那么这边有3台,A,B,C,从server提交又获取,使得这三台,可以在server上获取其他二台提交的一些信息,另外还可以版本比较merge合并,很神奇的东西</p>
