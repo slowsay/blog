@@ -1,0 +1,695 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="canvas,互动,html5," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="Landrover 路虎在整理硬盘时,发现有一个项目用到数组集点阵位计算量,跑的是canvas舞台,想想最近是在整理作品,看了下之前做的,还是有点价值,打算再拿出来分析一下,以便又被放在角落里">
+<meta property="og:type" content="article">
+<meta property="og:title" content="遇到哪些事儿之-landrover">
+<meta property="og:url" content="http://www.taoring.com/2016/10/19/landrover/index.html">
+<meta property="og:site_name" content="那些事儿">
+<meta property="og:description" content="Landrover 路虎在整理硬盘时,发现有一个项目用到数组集点阵位计算量,跑的是canvas舞台,想想最近是在整理作品,看了下之前做的,还是有点价值,打算再拿出来分析一下,以便又被放在角落里">
+<meta property="og:image" content="http://www.taoring.com/images/work/landrover/0.gif">
+<meta property="og:image" content="http://www.taoring.com/images/work/landrover/2.png">
+<meta property="og:image" content="http://www.taoring.com/images/work/landrover/1.png">
+<meta property="og:image" content="http://www.taoring.com/images/work/landrover/0.png">
+<meta property="og:image" content="http://www.taoring.com/images/work/landrover/3.png">
+<meta property="og:image" content="http://www.taoring.com/images/work/landrover/1.gif">
+<meta property="og:updated_time" content="2016-10-19T09:45:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="遇到哪些事儿之-landrover">
+<meta name="twitter:description" content="Landrover 路虎在整理硬盘时,发现有一个项目用到数组集点阵位计算量,跑的是canvas舞台,想想最近是在整理作品,看了下之前做的,还是有点价值,打算再拿出来分析一下,以便又被放在角落里">
+<meta name="twitter:image" content="http://www.taoring.com/images/work/landrover/0.gif">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.taoring.com/2016/10/19/landrover/"/>
+
+
+  <title> 遇到哪些事儿之-landrover | 那些事儿 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">那些事儿</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一种网络记述</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-board">
+          <a href="/board" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-edit"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                遇到哪些事儿之-landrover
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-19T15:54:46+08:00" content="2016-10-19">
+              2016-10-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/19/landrover/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/19/landrover/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Landrover-路虎"><a href="#Landrover-路虎" class="headerlink" title="Landrover 路虎"></a>Landrover 路虎</h1><p>在整理硬盘时,发现有一个项目用到数组集点阵位计算量,跑的是canvas舞台,想想最近是在整理作品,看了下之前做的,还是有点价值,打算再拿出来分析一下,以便又被放在角落里<br><img src="/images/work/landrover/0.gif" alt=""></p>
+<a id="more"></a>
+<p>记得这个项目最初是flash版本,与新浪微博有互动,做完后,当时正全面转html5阶段,看版本时间也是2014年9月,那应该是的了,微信h5刚火的时候</p>
+<p>与此同时就顺带在js版本,做一个test,想在html页面尝试做项目,但由于当时一看canvas对于密集点阵好卡,就打消这个念头</p>
+<p>拿到一堆layout时,看了一下主要功能页面实现的优先顺序,一般如果1天到2天内未能解决问题,那么就要跟设计师沟通用其他方式,不过还好,这个地球,还不是特别难的,就花了点时间,描地球点轮廓坐标</p>
+<h3 id="进入角色"><a href="#进入角色" class="headerlink" title="进入角色"></a>进入角色</h3><p>这个数据,最初是在flash里面画点的，想不到,还在,呵呵<br><img src="/images/work/landrover/2.png" alt=""><br>看到没,密密麻麻,在获取点位xy坐标,基本用手工去布置在layout上,获取数据,咱们累点没关系,设计师更累,设计的东西,一次又一次的成了飞机稿,这个我做过设计师深有体会,所以,大家在与设计师配合成,千万别说人家是美工(美丽的民工),呵呵<br>在这点,还是尽量迎合设计师的口胃及交流</p>
+<p>接下来就是走layout设计稿 ,回头来看看还是蛮好的界面</p>
+<p><img src="/images/work/landrover/1.png" alt=""></p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>我当初没想明白,这玩意应该怎么做,一次一次的与设计师沟通后,才大致理解人家的意思,让球转动,还图片不倒着看,要不然,你觉得人家客户能答应吗?<br>也是,我是甲方,我也不答应啊,哈哈哈…</p>
+<p><img src="/images/work/landrover/0.png" alt=""></p>
+<p>对了,就是两点距离公式</p>
+<p>至于让图顺着走,知道xy坐标,套着两点距离公式,也能出来,看下图<br><img src="/images/work/landrover/3.png" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x=中心点-两点坐标距离*Math.sin(增量)</div><div class="line">y=中心点-两点坐标距离*Math.cos(增量)</div></pre></td></tr></table></figure></p>
+<p>那么增量怎么来,这个在flash中,在html中，是一样的,坐标(0,0)都是从左上角开始,所以,与咱们数学中学到的坐标就不一样了这个可以换算,年龄大了,都已经忘记怎么换,呵<br>大致意思是旋转度数大于180度时,cos,sin值成了负数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//两点之间的距离</div><div class="line">var vx=x,vy=y,centery=100,centerx=100;</div><div class="line">var _r=Math.sqrt(Math.pow(centery - vy, 2) + Math.pow(centerx - vx, 2));</div><div class="line">//从两点之间的距离公式,换算x,y弧度</div><div class="line">var _anglex=Math.asin((centerx - vx) / _r), _angley = Math.acos((centery - vy) / _r);</div><div class="line">//换好后,还待去判断中心点,一个物体总有中心点,那距离也总有相减成负的吧,因为他是绕圈,</div><div class="line">vx&gt;中心点,vy&lt;中心点,第一象限,angle=_anglex;</div><div class="line">vx&gt;中心点,vy&gt;中心点,第四象限,angle=Math.PI-_anglex;</div><div class="line"></div><div class="line">vx&lt;中心点,vy&gt;中心点,第三象限,angle=_angley;</div><div class="line">vx&lt;中心点,vy&lt;中心点,第二象限,angle=_anglex;</div><div class="line">//这个是转的方向,当前是按时钟转圈,递减</div><div class="line">Math.abs(angle) &gt;= 360 ? angle = 0 : angle -= Drawbox.speeds;</div><div class="line"></div><div class="line">//x,y坐标绕中心点转</div><div class="line">x = centerx - _r * Math.sin(angle);</div><div class="line">y = centery - _r * Math.cos(angle);</div></pre></td></tr></table></figure></p>
+<p><img src="/images/work/landrover/1.gif" alt=""></p>
+<h3 id="分析导向"><a href="#分析导向" class="headerlink" title="分析导向"></a>分析导向</h3><p>对于canvas渲染,设置当alpha=0时,就过滤渲染<br>与此同时,在上面互动效果中,做了三层</p>
+<ul>
+<li>第一层是线</li>
+<li>第二层是线构成面</li>
+<li>第三层就是点信息层</li>
+</ul>
+<p>这样的话分层处理,三个数组,最重要的是,所有物体不是直接碰撞,而是由数组数据互相碰撞,计算<br>对于数据这里稍微提一下,尽量用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for(var i=0;i&lt;obj;i++)&#123;</div><div class="line">obj[i].x=33;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这个在测试过程中,计算量的快慢有所差异,现在有很多人对for in ,for each特别热衷,这是外面封装了一层哇,所以,你觉得方便,性能方面有些损失<br>有不同意见的可以去试试</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/canvas/" rel="tag">#canvas</a>
+          
+            <a href="/tags/互动/" rel="tag">#互动</a>
+          
+            <a href="/tags/html5/" rel="tag">#html5</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/19/adidas001/" rel="next" title="遇到哪些事儿之—哪里都是运动场">
+                <i class="fa fa-chevron-left"></i> 遇到哪些事儿之—哪里都是运动场
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/10/19/landrover/"
+     data-title="遇到哪些事儿之-landrover"
+     data-content=""
+     data-url="http://www.taoring.com/2016/10/19/landrover/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/19/landrover/"
+           data-title="遇到哪些事儿之-landrover" data-url="http://www.taoring.com/2016/10/19/landrover/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/assets/logo.jpg"
+               alt="Jack Tao" />
+          <p class="site-author-name" itemprop="name">Jack Tao</p>
+          <p class="site-description motion-element" itemprop="description">一个对好玩的技术保持着三分种热度的坚持者,七分在想其他技术资讯的爱好者.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Landrover-路虎"><span class="nav-number">1.</span> <span class="nav-text">Landrover 路虎</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进入角色"><span class="nav-number">1.0.1.</span> <span class="nav-text">进入角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">1.0.2.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析导向"><span class="nav-number">1.0.3.</span> <span class="nav-text">分析导向</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jack Tao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"slowsay"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
