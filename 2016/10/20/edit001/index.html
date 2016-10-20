@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="地图编辑工具">
+<meta name="description" content="先上图又挖出一个项目,一块HDD的硬盘挂了,摔了一下,直接石化,从mac老硬盘上,找到,好像也是test项目,我也不知道什么时候写的，也许刚做完那个路虎项目,顺带弄了个小玩意,去年来杭州参加D2,好像看到过阿里云可视化部,写了一个地球互动,不过,他们用的是threejs看过老罗的发布会,我感觉我也停不下来,这里提下,老罗真是个实在的人好了,继续描述本案例,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="地图编辑工具">
 <meta property="og:url" content="http://www.taoring.com/2016/10/20/edit001/index.html">
 <meta property="og:site_name" content="那些事儿">
-<meta property="og:description" content="地图编辑工具">
-<meta property="og:updated_time" content="2016-10-20T15:26:46.000Z">
+<meta property="og:description" content="先上图又挖出一个项目,一块HDD的硬盘挂了,摔了一下,直接石化,从mac老硬盘上,找到,好像也是test项目,我也不知道什么时候写的，也许刚做完那个路虎项目,顺带弄了个小玩意,去年来杭州参加D2,好像看到过阿里云可视化部,写了一个地球互动,不过,他们用的是threejs看过老罗的发布会,我感觉我也停不下来,这里提下,老罗真是个实在的人好了,继续描述本案例,">
+<meta property="og:image" content="http://www.taoring.com/images/work/map/0.png">
+<meta property="og:image" content="http://www.taoring.com/images/work/map/1.png">
+<meta property="og:image" content="http://www.taoring.com/images/work/map/2.png">
+<meta property="og:image" content="http://www.taoring.com/images/work/map/3.png">
+<meta property="og:image" content="http://www.taoring.com/images/work/map/4.png">
+<meta property="og:updated_time" content="2016-10-20T17:47:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="地图编辑工具">
-<meta name="twitter:description" content="地图编辑工具">
+<meta name="twitter:description" content="先上图又挖出一个项目,一块HDD的硬盘挂了,摔了一下,直接石化,从mac老硬盘上,找到,好像也是test项目,我也不知道什么时候写的，也许刚做完那个路虎项目,顺带弄了个小玩意,去年来杭州参加D2,好像看到过阿里云可视化部,写了一个地球互动,不过,他们用的是threejs看过老罗的发布会,我感觉我也停不下来,这里提下,老罗真是个实在的人好了,继续描述本案例,">
+<meta name="twitter:image" content="http://www.taoring.com/images/work/map/0.png">
 
 
 
@@ -333,7 +339,26 @@
       
 
       
-        <h1 id="地图编辑工具"><a href="#地图编辑工具" class="headerlink" title="地图编辑工具"></a>地图编辑工具</h1>
+        <h1 id="先上图"><a href="#先上图" class="headerlink" title="先上图"></a>先上图</h1><p><img src="/images/work/map/0.png" alt=""><br>又挖出一个项目,一块HDD的硬盘挂了,摔了一下,直接石化,从mac老硬盘上,找到,好像也是test项目,我也不知道什么时候写的，也许刚做完那个路虎项目,顺带弄了个小玩意,去年来杭州参加D2,好像看到过阿里云可视化部,写了一个地球互动,不过,他们用的是threejs<br>看过老罗的发布会,我感觉我也停不下来,这里提下,老罗真是个实在的人<br>好了,继续描述本案例,</p>
+<a id="more"></a>
+<p><img src="/images/work/map/1.png" alt=""><br><img src="/images/work/map/2.png" alt=""></p>
+<h1 id="接下来就分析"><a href="#接下来就分析" class="headerlink" title="接下来就分析"></a>接下来就分析</h1><p>首先,咱们说说这是用什么写的,核心代码是啥,大晚上的写东西,感觉有点饿了,力不从心…</p>
+<h3 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h3><p><a href="http://baike.baidu.com/link?url=ChX6OPmTnUrs1I4nn6VDxOebx_yBNKWxW2QRW7PvUZCivAuqsUcYspzEyxlWCWVv_OemkAhiUwmgmfzQ1qTYgei37s_N_tYm-4cXvB5Lo_O#2_4" target="_blank" rel="external">翻他牌</a><br><img src="/images/work/map/3.png" alt=""><br>这个公式可以换算<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">y=a*x*x+b*x+c</div></pre></td></tr></table></figure></p>
+<ul>
+<li>第一步,先从原点开始(0,0),这样c=0了</li>
+<li>第二步,把抛物线对称轴搞出来b=(y-a<em>x</em>x)/x</li>
+<li>第三步,利用切线方程用导数求导y’=2ax+b,</li>
+</ul>
+<p><img src="/images/work/map/4.png" alt=""></p>
+<h3 id="review"><a href="#review" class="headerlink" title="review"></a>review</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">for (var i = 0, arr = _gobal.arr; i &lt; arr.length; i++) &#123;</div><div class="line">var obj = arr[i];</div><div class="line">var tan = 2 * _gobal.rate * obj.start + obj.b;</div><div class="line">obj.start += obj.rate * Math.sqrt(_gobal.speeds / (tan * tan + 1));</div><div class="line">//界内</div><div class="line">if ((obj.start &gt; obj.targetx &amp;&amp; obj.rate == 1 ) || (obj.start &lt; obj.targetx &amp;&amp; obj.rate == -1)) &#123;</div><div class="line">    obj.start = obj.targetx;</div><div class="line">&#125;</div><div class="line">var x = obj.start, y = _gobal.rate * x * x + obj.b * x;</div><div class="line">if (obj.start !== obj.targetx)</div><div class="line">    setXY($(&apos;pbox&apos; + i).lastChild, x + Math.round(obj.x), y + Math.round(obj.y));</div><div class="line">else</div><div class="line">    setXY($(&apos;pbox&apos; + i).lastChild, obj.x, obj.y), obj.targetx = (obj.x - obj.x1) * -1, obj.targety = (obj.y - obj.y1) * -1, obj.b = (obj.targety - _gobal.rate * obj.targetx * obj.targetx) / obj.targetx, obj.start = 0, obj.rate = obj.targetx &gt; 0 ? 1 : -1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="画点"><a href="#画点" class="headerlink" title="画点"></a>画点</h3><p>用css样式定义如.circle{width:4px;height:4px}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&apos;pbox&apos;&gt;</div><div class="line">&lt;div class=&apos;circle&apos;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&apos;circle&apos;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&apos;circle s&apos;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>带s定义的样式算是,要运动的球,其他就是固定坐标点</p>
+<h3 id="render渲染"><a href="#render渲染" class="headerlink" title="render渲染"></a>render渲染</h3><p>用的是requestAnimationFrame(render)</p>
+<h3 id="css3"><a href="#css3" class="headerlink" title="css3"></a>css3</h3><p>要想加入Css3的功能<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">@keyframes fadein &#123;</div><div class="line">    from &#123;</div><div class="line">        opacity: 0;</div><div class="line">    &#125;</div><div class="line">    to &#123;</div><div class="line">        opacity: 1;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@keyframes fadeout &#123;</div><div class="line">    from &#123;</div><div class="line">        opacity: 1;</div><div class="line">    &#125;</div><div class="line">    to &#123;</div><div class="line">        opacity: 0;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">document.getElementById(&apos;div&apos;).style.animationName=&apos;fadein&apos;;</div></pre></td></tr></table></figure></p>
+<p>这样就有alpha透明效果了</p>
+<h3 id="FPS"><a href="#FPS" class="headerlink" title="FPS"></a>FPS</h3><p>本例子,500个循环*3个点,1500个点,跑fps好像,在30-40左右,3000个点,fps降到18,这…,没活头了</p>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>…</p>
+
       
     </div>
 
@@ -522,7 +547,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#地图编辑工具"><span class="nav-number">1.</span> <span class="nav-text">地图编辑工具</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#先上图"><span class="nav-number">1.</span> <span class="nav-text">先上图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接下来就分析"><span class="nav-number">2.</span> <span class="nav-text">接下来就分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数学公式"><span class="nav-number">2.0.1.</span> <span class="nav-text">数学公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#review"><span class="nav-number">2.0.2.</span> <span class="nav-text">review</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#画点"><span class="nav-number">2.0.3.</span> <span class="nav-text">画点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#render渲染"><span class="nav-number">2.0.4.</span> <span class="nav-text">render渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3"><span class="nav-number">2.0.5.</span> <span class="nav-text">css3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FPS"><span class="nav-number">2.0.6.</span> <span class="nav-text">FPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">2.0.7.</span> <span class="nav-text">后续</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
