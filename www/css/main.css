@@ -1,0 +1,11 @@
+body {margin: 0 auto;padding: 0;background: #000;font-size:12px;color:#fff;}
+#webpaper {width: 1200px;height:2594px;background: #111;position:absolute;left:50%;margin:0px 0 0 -500px;}
+
+.game{width:720px;height:336px;position: absolute;top:228px;left:100px;}
+.game .list{width:720px;height:336px;}
+.game .ac{width:720px;height:336px;}/*cursor:url(../images/hand.png),pointer;*/
+.list,.ac{position: absolute;}
+
+.popmsg{position:absolute;color:#fff}
+
+.test{background:#f0f url(../images/title_logo.png) no-repeat 0px 20px;width: 132px;height: 134px;margin: 0 auto;position:absolute;}
