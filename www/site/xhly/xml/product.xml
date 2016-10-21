@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss>
+<!-- add 3期户型 in 2012 8 20 -->
+<three path = 'images/product/3qi_house/' >
+	<pic bigpath='big01.jpg' thumbpath='thumb1.jpg' />
+	<pic bigpath='big02.jpg' thumbpath='thumb2.jpg' />
+	<pic bigpath='big03.jpg' thumbpath='thumb3.jpg' />
+</three>
+
+<pic kind="A" other="二室二厅一卫" area="建筑面积:约 88平米" small="images/product/a.png" big="swf/product/a.swf"><![CDATA[南北双阳台，风光流转，景致加倍，奢享视觉美宴；卧室飘窗，氧气往来之间，心境一直新鲜；通透格局，4米大开间客厅，轩敞空间，盛纳岁月静好；餐厅、厨房、阳台，一线相连，视味双收，体味舒畅情致。]]></pic>
+<pic kind="B" other="二室二厅一卫" area="建筑面积:约 107平米" small="images/product/b.png" big="swf/product/b.swf"><![CDATA[客厅外接大阳台，饱览无限风光，全景尊贵体验；通透格局，清风肆意，日子适意，优渥美满生活；娴雅书房，外接赏花台，翰墨飘香，纸透芬芳；独立洗衣房，处处为您着想，生活无上方便。]]></pic>
+<pic kind="C" other="二室二厅一卫" area="建筑面积:约 93平米" small="images/product/c.png" big="swf/product/c.swf"><![CDATA[南北通透的户型设计，将阳光和风全面引入居室；主卧设有大转角飘窗，凸显阔绰空间尺度；独立洗衣房，充分考虑到业主的日常生活，舒适与生俱来；明卫设计，人性化全程关照，清爽无处不在。]]></pic>
+<pic kind="D" other="二室二厅一卫" area="建筑面积:约 79平米" small="images/product/d.png" big="swf/product/d.swf"><![CDATA[客厅南向阳台，朝迎旭日，夜候星光，一切妙不可言；双阳卧室，阳光满满，日子暖暖，幸福朝夕相伴；主卧转角窗，视野无限阔达，对风景迷恋，对自我放逐；明卫设计，更科学、更人性，生活时处便捷。]]></pic>
+<pic kind="E" other="二室二厅一卫" area="建筑面积:约 59平米" small="images/product/e.png" big="swf/product/e.swf"><![CDATA[精致两居，户型方正实用，得房率高，打造二人私享世界；卧室连接超大观景飘窗，尽揽鲜活天然景致，使起居生活更加丰富多彩；独立书房，书香淡雅，体现主人优雅品味；餐厅、厨房独立自成一体，方便琐碎生活，细节体现关爱。]]></pic>
+<pic kind="I" other="二室二厅一卫" area="建筑面积:约 128平米" small="images/product/i.png" big="swf/product/i.swf"><![CDATA[精致两居，户型方正实用，得房率高，打造二人私享世界；卧室连接超大观景飘窗，尽揽鲜活天然景致，使起居生活更加丰富多彩；独立书房，书香淡雅，体现主人优雅品味；餐厅、厨房独立自成一体，方便琐碎生活，细节体现关爱。]]></pic>
+<pic kind="K" other="二室二厅一卫" area="建筑面积:约 64平米" small="images/product/k.png" big="swf/product/k.swf"><![CDATA[精致两居，户型方正实用，得房率高，打造二人私享世界；卧室连接超大观景飘窗，尽揽鲜活天然景致，使起居生活更加丰富多彩；独立书房，书香淡雅，体现主人优雅品味；餐厅、厨房独立自成一体，方便琐碎生活，细节体现关爱。]]></pic>
+<pic kind="L" other="二室二厅一卫" area="建筑面积:约 79平米" small="images/product/l.png" big="swf/product/l.swf"><![CDATA[精致两居，户型方正实用，得房率高，打造二人私享世界；卧室连接超大观景飘窗，尽揽鲜活天然景致，使起居生活更加丰富多彩；独立书房，书香淡雅，体现主人优雅品味；餐厅、厨房独立自成一体，方便琐碎生活，细节体现关爱。]]></pic>
+</rss>

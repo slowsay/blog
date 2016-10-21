@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss>
+<item names="木盒" cn="木盒" en="WOOD" space="15"><![CDATA[sfdf]]></item>
+<item names="石盒" cn="石盒" en="STONE" space="15"><![CDATA[sfdf]]></item>
+<item names="瓷盒" cn="瓷盒" en="PORCELAIN" space="15"><![CDATA[sfdf]]></item>
+<item names="复合材质" cn="复合材质" en="COMPOSITION" space="15"><![CDATA[sfdf]]></item>
+<item names="防潮盒" cn="防潮盒" en="PROTECTION" space="15"><![CDATA[sfdf]]></item>
+<item names="上品" cn="上品" en="ELEGANT" space="15"><![CDATA[sfdf]]></item>
+<itemsub names="木盒" cn="黑檀" en="WOOD" sen="ht" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="印茄木" en="WOOD" sen="yjm" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="鸡翅木" en="WOOD" sen="jcm" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="亚花梨" en="WOOD" sen="yhl" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="酸枝木" en="WOOD" sen="szm" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="硬木" en="WOOD" sen="yinmu" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="柚木" en="WOOD" sen="youmu" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="红檀" en="WOOD" sen="hongtan" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="金丝楠" en="WOOD" sen="jingsinan" suby="104" space="8"><![CDATA[sfdf]]></itemsub>
+<itemsub names="木盒" cn="其他" en="WOOD" sen="muother" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="雅安汉白玉" en="STONE" sen="yaanhan" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="南阳汉白玉" en="STONE" sen="nanyanhan" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="北京汉白玉" en="STONE" sen="beijinghan" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="米黄玉" en="STONE" sen="mihuang" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="蓝田玉" en="STONE" sen="lantian" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="岫玉" en="STONE" sen="xiuyu" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="石坛" en="STONE" sen="shitan" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="花岗岩" en="STONE" sen="huagang" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="石盒" cn="鲁山绿" en="STONE" sen="lushanlv" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="瓷盒" cn="瓷盒类" en="PORCELAIN" sen="cihe" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="复合材质" cn="复合材质类" en="COMPOSITION" sen="fuhecai" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="防潮盒" cn="防潮盒类" en="PROTECTION" sen="fangchaohe" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+<itemsub names="上品" cn="上品" en="ELEGANT" sen="ELEGANT" suby="104" space="7"><![CDATA[sfdf]]></itemsub>
+</rss>
