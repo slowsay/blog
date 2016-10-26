@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>那些事儿</title>
+  <subtitle>一种网络记述</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.taoring.com/"/>
+  <updated>2016-10-25T07:56:56.000Z</updated>
+  <id>http://www.taoring.com/</id>
+  
+  <author>
+    <name>Jack Tao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Prometheus图形渲染框架</title>
+    <link href="http://www.taoring.com/2016/10/25/prometheus/"/>
+    <id>http://www.taoring.com/2016/10/25/prometheus/</id>
+    <published>2016-10-25T07:14:54.000Z</published>
+    <updated>2016-10-25T07:56:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Prometheus-普罗米修斯"><a href="#Prometheus-普罗米修斯" class="headerlink" title="Prometheus(普罗米修斯)"></a>Prometheus(普罗米修斯)</h1><p>图形渲染框架<br>基于js原型prototype,dom而写的一款canvas渲染动画平台,整个框架的写法,参照flash as3框架<br>作为motion场景，类似 flashplayer平台，进行舞台渲染动画，可以放入外部图片，内置多边形，矩形，圆形，三角形等对象object</p>
+<p><img src="/images/work/prometheus/0.gif" alt=""></p>
+<a id="more"></a>
+<p>对canvas比较早的探索,在div与canvas之间选择,那肯定喜欢用canvas模式,对于从as3转型过来的比较适合,另外canvas的属性也并不多<br>基本靠这几个属性再次封装,以达到伪as3,oop模式的写法,写一个displayobject框架,当时也只是用部分功能<br>框架已经隔置许久啊,现在再次封装,看看,能不能把3d的合进来,期待哇!<br>看起来,比其他的框架好像文件小些,只有14KB,目前只是普通压缩</p>
+<p>翻牌<a href="https://github.com/slowsay/Prometheus" target="_blank" rel="external">github</a><br>希望as3的同学,可以一起完善他</p>
+<p>忙于其他的研究,以致此框架,停滞在0.0.6版本,</p>
+<h2 id="修复"><a href="#修复" class="headerlink" title="修复"></a>修复</h2><ul>
+<li>图形渲染</li>
+<li>图像渲染</li>
+<li>文字渲染</li>
+</ul>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><ul>
+<li><a href="https://github.com/slowsay/Prometheus/tree/master/example/index.html" target="_blank" rel="external">基础例子</a></li>
+<li><a href="https://github.com/slowsay/Prometheus/tree/master/example/text.html" target="_blank" rel="external">画文字</a></li>
+<li><a href="https://github.com/slowsay/Prometheus/tree/master/example/bitmap.html" target="_blank" rel="external">贴图</a><br>最好git下来,本地运行</li>
+</ul>
+<p>更多修复前往 <a href="https://www.npmjs.com/package/Prometheus" target="_blank" rel="external">翻他牌</a></p>
+<p>图形<br><img src="/images/work/prometheus/1.gif" alt=""></p>
+<p>文字<br><img src="/images/work/prometheus/2.gif" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Prometheus-普罗米修斯&quot;&gt;&lt;a href=&quot;#Prometheus-普罗米修斯&quot; class=&quot;headerlink&quot; title=&quot;Prometheus(普罗米修斯)&quot;&gt;&lt;/a&gt;Prometheus(普罗米修斯)&lt;/h1&gt;&lt;p&gt;图形渲染框架&lt;br&gt;基于js原型prototype,dom而写的一款canvas渲染动画平台,整个框架的写法,参照flash as3框架&lt;br&gt;作为motion场景，类似 flashplayer平台，进行舞台渲染动画，可以放入外部图片，内置多边形，矩形，圆形，三角形等对象object&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/work/prometheus/0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>做的不是技术,是情怀</title>
+    <link href="http://www.taoring.com/2016/10/21/feeling/"/>
+    <id>http://www.taoring.com/2016/10/21/feeling/</id>
+    <published>2016-10-21T03:56:33.000Z</published>
+    <updated>2016-10-21T15:30:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="www-taoring-com"><a href="#www-taoring-com" class="headerlink" title="www.taoring.com"></a><a href="/www/">www.taoring.com</a></h1><p><img src="/images/work/tr/0.png" alt=""><br>这域名陪伴10年,在上面放过作品,博客,版本一个换一个,也算不浪费每年的续费<br>在上海的那几年基本都无力再维护,停了虚拟主机,也丢了备案号,这回亏大了,这备案号可是几月注册来的.可惜了!工作上的高度运作,之后转向 <a href="http://weibo.com/slowsay" target="_blank" rel="external">微博</a></p>
+<a id="more"></a>
+<p>每天回家倒头就睡,起来闭眼刷牙,晚上熬夜这可能是一种习惯,还好我们的BOSS及行政HR team比较人性化,弹性工作,基本不用担心迟到早退,这也不影响我们实时对工作的热情</p>
+<p>现在成了家,有了媳妇,慢慢的转变,身体是本钱,也是责任,尽量体会家人的感受吧</p>
+<p>不过,只要她不说,呵呵,我还是继续看点什么,做点什么,因为这个行业信息,自从手机端发展后,已经爆发性的数据信息发送接收,比起wap那时的无线应用要火的多</p>
+<p>在杭州公司的体会是，看到一帮小朋友(开发的,制作的),准时踩点下班,这让我很吃惊,也能理解.哈哈哈,真不同我们那年代了哇,</p>
+<p>很多人不知道我们小时候那时玩的是什么</p>
+<p>有了电脑后,当然狂玩游戏啊,帝国,红警,cs,单机版…brabrabra</p>
+<p>好了,不说太多,只想放作品来着,还有很多事情要做</p>
+<p>这里要感谢github开源站,免费空间哇</p>
+<p>个人minisite <a href="/www/">www.taoring.com</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;www-taoring-com&quot;&gt;&lt;a href=&quot;#www-taoring-com&quot; class=&quot;headerlink&quot; title=&quot;www.taoring.com&quot;&gt;&lt;/a&gt;&lt;a href=&quot;/www/&quot;&gt;www.taoring.com&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/work/tr/0.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;这域名陪伴10年,在上面放过作品,博客,版本一个换一个,也算不浪费每年的续费&lt;br&gt;在上海的那几年基本都无力再维护,停了虚拟主机,也丢了备案号,这回亏大了,这备案号可是几月注册来的.可惜了!工作上的高度运作,之后转向 &lt;a href=&quot;http://weibo.com/slowsay&quot;&gt;微博&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.taoring.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+      <category term="前端" scheme="http://www.taoring.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="flash" scheme="http://www.taoring.com/tags/flash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遇到哪些事儿之-康师傅冰红茶</title>
+    <link href="http://www.taoring.com/2016/10/21/icetea/"/>
+    <id>http://www.taoring.com/2016/10/21/icetea/</id>
+    <published>2016-10-21T01:28:52.000Z</published>
+    <updated>2016-10-21T02:16:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="冰力十足-痛快解ME"><a href="#冰力十足-痛快解ME" class="headerlink" title="冰力十足,痛快解ME"></a>冰力十足,痛快解ME</h1><p>2015年康师傅冰红茶,推广做的campaign,每年都会来几个红茶,绿茶,呵呵,那么大的一个视频就不放上来了，几十M视频受不了,整个项目也就一俩M,应用程序几KB算是多的了<br>不过,pc端还是可以放宽些,因为机子大都牛的机子,对于这种快销类产品来说,图片质量还是要保证的,手机端就要复杂了，<br>哎哟,这gif保存的质量就有点…,要是licecap能有质量选项那就好了<br><img src="/images/work/icetea/0.gif" alt=""></p>
+<a id="more"></a>
+<h3 id="先看片"><a href="#先看片" class="headerlink" title="先看片"></a>先看片</h3><p><img src="/images/work/icetea/0.png" alt=""></p>
+<p><img src="/images/work/icetea/1.png" alt=""></p>
+<p><img src="/images/work/icetea/2.png" alt=""></p>
+<p><img src="/images/work/icetea/3.png" alt=""></p>
+<h3 id="主要做的工具及思路"><a href="#主要做的工具及思路" class="headerlink" title="主要做的工具及思路"></a>主要做的工具及思路</h3><ul>
+<li><p>图片质量<br>那么开始提到pc端可以放宽图片质量,基本ps保存在60的质量，这个用了10年了,保证图片不失真又要小容量的样子,又达到效果，这个要对的起人家设计师,辛辛苦苦设计出来的,你给弄的质量太低,也不好</p>
+</li>
+<li><p>功能实现<br>1,鼠标左右晃动,这个在溪湖林语里面就已经开发过,只是拿来套套而已<br>2,滚轮切换页面,停止gif播放</p>
+</li>
+<li><p>互动<br>其实做互动不难,难在你在设计师出来后,要有全身的细胞都在动,看layout就不停的在想事件线,那就对了<br>看到layout,需要整个思路,从开场到停止再到结束,退场,还有切换</p>
+</li>
+<li><p>工具<br>aptana+js+html+css</p>
+</li>
+<li><p>图片压缩站点<br>tinypng.org,一个比较好的压缩图片站点,那时老痛苦了,一个一个点下载,呵呵,现在可以下载整个rar包,感谢他们!</p>
+</li>
+</ul>
+<p><a href="http://tinypng.org" target="_blank" rel="external">翻他牌</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;冰力十足-痛快解ME&quot;&gt;&lt;a href=&quot;#冰力十足-痛快解ME&quot; class=&quot;headerlink&quot; title=&quot;冰力十足,痛快解ME&quot;&gt;&lt;/a&gt;冰力十足,痛快解ME&lt;/h1&gt;&lt;p&gt;2015年康师傅冰红茶,推广做的campaign,每年都会来几个红茶,绿茶,呵呵,那么大的一个视频就不放上来了，几十M视频受不了,整个项目也就一俩M,应用程序几KB算是多的了&lt;br&gt;不过,pc端还是可以放宽些,因为机子大都牛的机子,对于这种快销类产品来说,图片质量还是要保证的,手机端就要复杂了，&lt;br&gt;哎哟,这gif保存的质量就有点…,要是licecap能有质量选项那就好了&lt;br&gt;&lt;img src=&quot;/images/work/icetea/0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>地图编辑工具</title>
+    <link href="http://www.taoring.com/2016/10/20/edit001/"/>
+    <id>http://www.taoring.com/2016/10/20/edit001/</id>
+    <published>2016-10-20T15:25:33.000Z</published>
+    <updated>2016-10-21T01:30:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="先上图"><a href="#先上图" class="headerlink" title="先上图"></a>先上图</h1><p><img src="/images/work/map/0.png" alt=""><br>又挖出一个项目,一块HDD的硬盘挂了,摔了一下,直接石化,从mac老硬盘上,找到,好像也是test项目,我也不知道什么时候写的，也许刚做完那个路虎项目,顺带弄了个小玩意,去年来杭州参加D2,好像看到过阿里云可视化部,写了一个地球互动,不过,他们用的是threejs<br>看过老罗的发布会,我感觉我也停不下来,这里提下,老罗真是个实在的人<br>好了,继续描述本案例,</p>
+<a id="more"></a>
+<p><img src="/images/work/map/1.png" alt=""><br><img src="/images/work/map/2.png" alt=""></p>
+<h1 id="接下来就分析"><a href="#接下来就分析" class="headerlink" title="接下来就分析"></a>接下来就分析</h1><p>首先,咱们说说这是用什么写的,核心代码是啥,大晚上的写东西,感觉有点饿了,力不从心…</p>
+<h3 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h3><p><a href="http://baike.baidu.com/link?url=ChX6OPmTnUrs1I4nn6VDxOebx_yBNKWxW2QRW7PvUZCivAuqsUcYspzEyxlWCWVv_OemkAhiUwmgmfzQ1qTYgei37s_N_tYm-4cXvB5Lo_O#2_4" target="_blank" rel="external">翻他牌</a><br><img src="/images/work/map/3.png" alt=""><br>这个公式可以换算<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">y=a*x*x+b*x+c</div></pre></td></tr></table></figure></p>
+<ul>
+<li>第一步,先从原点开始(0,0),这样c=0了</li>
+<li>第二步,把抛物线对称轴搞出来b=(y-a<em>x</em>x)/x</li>
+<li>第三步,利用切线方程用导数求导y’=2ax+b,</li>
+</ul>
+<p><img src="/images/work/map/4.png" alt=""></p>
+<h3 id="review"><a href="#review" class="headerlink" title="review"></a>review</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">for (var i = 0, arr = _gobal.arr; i &lt; arr.length; i++) &#123;</div><div class="line">var obj = arr[i];</div><div class="line">var tan = 2 * _gobal.rate * obj.start + obj.b;</div><div class="line">obj.start += obj.rate * Math.sqrt(_gobal.speeds / (tan * tan + 1));</div><div class="line">//界内</div><div class="line">if ((obj.start &gt; obj.targetx &amp;&amp; obj.rate == 1 ) || (obj.start &lt; obj.targetx &amp;&amp; obj.rate == -1)) &#123;</div><div class="line">    obj.start = obj.targetx;</div><div class="line">&#125;</div><div class="line">var x = obj.start, y = _gobal.rate * x * x + obj.b * x;</div><div class="line">if (obj.start !== obj.targetx)</div><div class="line">    setXY($(&apos;pbox&apos; + i).lastChild, x + Math.round(obj.x), y + Math.round(obj.y));</div><div class="line">else</div><div class="line">    setXY($(&apos;pbox&apos; + i).lastChild, obj.x, obj.y), obj.targetx = (obj.x - obj.x1) * -1, obj.targety = (obj.y - obj.y1) * -1, obj.b = (obj.targety - _gobal.rate * obj.targetx * obj.targetx) / obj.targetx, obj.start = 0, obj.rate = obj.targetx &gt; 0 ? 1 : -1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="画点"><a href="#画点" class="headerlink" title="画点"></a>画点</h3><p>用css样式定义如.circle{width:4px;height:4px}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&apos;pbox&apos;&gt;</div><div class="line">&lt;div class=&apos;circle&apos;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&apos;circle&apos;&gt;&lt;/div&gt;</div><div class="line">&lt;div class=&apos;circle s&apos;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>带s定义的样式算是,要运动的球,其他就是固定坐标点</p>
+<h3 id="render渲染"><a href="#render渲染" class="headerlink" title="render渲染"></a>render渲染</h3><p>用的是requestAnimationFrame(render)</p>
+<h3 id="css3"><a href="#css3" class="headerlink" title="css3"></a>css3</h3><p>要想加入Css3的功能<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">@keyframes fadein &#123;</div><div class="line">    from &#123;</div><div class="line">        opacity: 0;</div><div class="line">    &#125;</div><div class="line">    to &#123;</div><div class="line">        opacity: 1;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@keyframes fadeout &#123;</div><div class="line">    from &#123;</div><div class="line">        opacity: 1;</div><div class="line">    &#125;</div><div class="line">    to &#123;</div><div class="line">        opacity: 0;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">document.getElementById(&apos;div&apos;).style.animationName=&apos;fadein&apos;;</div></pre></td></tr></table></figure></p>
+<p>这样就有alpha透明效果了</p>
+<h3 id="FPS"><a href="#FPS" class="headerlink" title="FPS"></a>FPS</h3><p>本例子,500个循环*3个点,1500个点,跑fps好像,在30-40左右,3000个点,fps降到18,这…,没活头了</p>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>…</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;先上图&quot;&gt;&lt;a href=&quot;#先上图&quot; class=&quot;headerlink&quot; title=&quot;先上图&quot;&gt;&lt;/a&gt;先上图&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/work/map/0.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;又挖出一个项目,一块HDD的硬盘挂了,摔了一下,直接石化,从mac老硬盘上,找到,好像也是test项目,我也不知道什么时候写的，也许刚做完那个路虎项目,顺带弄了个小玩意,去年来杭州参加D2,好像看到过阿里云可视化部,写了一个地球互动,不过,他们用的是threejs&lt;br&gt;看过老罗的发布会,我感觉我也停不下来,这里提下,老罗真是个实在的人&lt;br&gt;好了,继续描述本案例,&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+    
+      <category term="js" scheme="http://www.taoring.com/tags/js/"/>
+    
+      <category term="css" scheme="http://www.taoring.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遇到哪些事儿之-landrover</title>
+    <link href="http://www.taoring.com/2016/10/19/landrover/"/>
+    <id>http://www.taoring.com/2016/10/19/landrover/</id>
+    <published>2016-10-19T07:54:46.000Z</published>
+    <updated>2016-10-21T01:31:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Landrover-路虎"><a href="#Landrover-路虎" class="headerlink" title="Landrover 路虎"></a>Landrover 路虎</h1><p>在整理硬盘时,发现有一个项目用到数组集点阵位计算量,跑的是canvas舞台,想想最近是在整理作品,看了下之前做的,还是有点价值,打算再拿出来分析一下,以便又被放在角落里<br><img src="/images/work/landrover/0.gif" alt=""></p>
+<a id="more"></a>
+<p>记得这个项目最初是flash版本,与新浪微博有互动,做完后,当时正全面转html5阶段,看版本时间也是2014年9月,那应该是的了,微信h5刚火的时候</p>
+<p>与此同时就顺带在js版本,做一个test,想在html页面尝试做项目,但由于当时一看canvas对于密集点阵好卡,就打消这个念头</p>
+<p>拿到一堆layout时,看了一下主要功能页面实现的优先顺序,一般如果1天到2天内未能解决问题,那么就要跟设计师沟通用其他方式,不过还好,这个地球,还不是特别难的,就花了点时间,描地球点轮廓坐标</p>
+<h3 id="进入角色"><a href="#进入角色" class="headerlink" title="进入角色"></a>进入角色</h3><p>这个数据,最初是在flash里面画点的，想不到,还在,呵呵<br><img src="/images/work/landrover/2.png" alt=""><br>看到没,密密麻麻,在获取点位xy坐标,基本用手工去布置在layout上,获取数据,咱们累点没关系,设计师更累,设计的东西,一次又一次的成了飞机稿,这个我做过设计师深有体会,所以,大家在与设计师配合成,千万别说人家是美工(美丽的民工),呵呵<br>在这点,还是尽量迎合设计师的口胃及交流</p>
+<p>接下来就是走layout设计稿 ,回头来看看还是蛮好的界面</p>
+<p><img src="/images/work/landrover/1.png" alt=""></p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>我当初没想明白,这玩意应该怎么做,一次一次的与设计师沟通后,才大致理解人家的意思,让球转动,还图片不倒着看,要不然,你觉得人家客户能答应吗?<br>也是,我是甲方,我也不答应啊,哈哈哈…</p>
+<p><img src="/images/work/landrover/0.png" alt=""></p>
+<p>对了,就是两点距离公式</p>
+<p>至于让图顺着走,知道xy坐标,套着两点距离公式,也能出来,看下图<br><img src="/images/work/landrover/3.png" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x=中心点-两点坐标距离*Math.sin(增量)</div><div class="line">y=中心点-两点坐标距离*Math.cos(增量)</div></pre></td></tr></table></figure></p>
+<p>那么增量怎么来,这个在flash中,在html中，是一样的,坐标(0,0)都是从左上角开始,所以,与咱们数学中学到的坐标就不一样了这个可以换算,年龄大了,都已经忘记怎么换,呵<br>大致意思是旋转度数大于180度时,cos,sin值成了负数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//两点之间的距离</div><div class="line">var vx=x,vy=y,centery=100,centerx=100;</div><div class="line">var _r=Math.sqrt(Math.pow(centery - vy, 2) + Math.pow(centerx - vx, 2));</div><div class="line">//从两点之间的距离公式,换算x,y弧度</div><div class="line">var _anglex=Math.asin((centerx - vx) / _r), _angley = Math.acos((centery - vy) / _r);</div><div class="line">//换好后,还待去判断中心点,一个物体总有中心点,那距离也总有相减成负的吧,因为他是绕圈,</div><div class="line">vx&gt;中心点,vy&lt;中心点,第一象限,angle=_anglex;</div><div class="line">vx&gt;中心点,vy&gt;中心点,第四象限,angle=Math.PI-_anglex;</div><div class="line"></div><div class="line">vx&lt;中心点,vy&gt;中心点,第三象限,angle=_angley;</div><div class="line">vx&lt;中心点,vy&lt;中心点,第二象限,angle=_anglex;</div><div class="line">//这个是转的方向,当前是按时钟转圈,递减</div><div class="line">Math.abs(angle) &gt;= 360 ? angle = 0 : angle -= Drawbox.speeds;</div><div class="line"></div><div class="line">//x,y坐标绕中心点转</div><div class="line">x = centerx - _r * Math.sin(angle);</div><div class="line">y = centery - _r * Math.cos(angle);</div></pre></td></tr></table></figure></p>
+<p><img src="/images/work/landrover/1.gif" alt=""></p>
+<h3 id="分析导向"><a href="#分析导向" class="headerlink" title="分析导向"></a>分析导向</h3><p>对于canvas渲染,设置当alpha=0时,就过滤渲染<br>与此同时,在上面互动效果中,做了三层</p>
+<ul>
+<li>第一层是线</li>
+<li>第二层是线构成面</li>
+<li>第三层就是点信息层</li>
+</ul>
+<p>这样的话分层处理,三个数组,最重要的是,所有物体不是直接碰撞,而是由数组数据互相碰撞,计算<br>对于数据这里稍微提一下,尽量用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for(var i=0;i&lt;obj;i++)&#123;</div><div class="line">obj[i].x=33;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这个在测试过程中,计算量的快慢有所差异,现在有很多人对for in ,for each特别热衷,这是外面封装了一层哇,所以,你觉得方便,性能方面有些损失<br>有不同意见的可以去试试</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Landrover-路虎&quot;&gt;&lt;a href=&quot;#Landrover-路虎&quot; class=&quot;headerlink&quot; title=&quot;Landrover 路虎&quot;&gt;&lt;/a&gt;Landrover 路虎&lt;/h1&gt;&lt;p&gt;在整理硬盘时,发现有一个项目用到数组集点阵位计算量,跑的是canvas舞台,想想最近是在整理作品,看了下之前做的,还是有点价值,打算再拿出来分析一下,以便又被放在角落里&lt;br&gt;&lt;img src=&quot;/images/work/landrover/0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遇到哪些事儿之—哪里都是运动场</title>
+    <link href="http://www.taoring.com/2016/10/19/adidas001/"/>
+    <id>http://www.taoring.com/2016/10/19/adidas001/</id>
+    <published>2016-10-18T16:18:10.000Z</published>
+    <updated>2016-10-19T06:20:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="adidas-哪里都是运动场"><a href="#adidas-哪里都是运动场" class="headerlink" title="adidas,哪里都是运动场"></a>adidas,哪里都是运动场</h1><p>2014年冬季,阿迪达斯训练带来新一季冬季单品,将高科技面料与时尚亮眼撞色完美结合,以“哪里都是运动场”为主题,引领全新城市运动精神。</p>
+<p><img src="/images/work/adidas/0.png" alt=""><br><a id="more"></a></p>
+<p>技术实现:canvas+js渲染框架</p>
+<p><img src="/images/work/adidas/1.png" alt=""></p>
+<p>图片跑帧</p>
+<p><img src="/images/work/adidas/0.gif" alt=""><br>同一canvas渲染数张大图,性能在首次，还是略慢,但缓存到本地,基本舒服感实足</p>
+<p><img src="/images/work/adidas/1.gif" alt=""><br>滚轮操作</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;adidas-哪里都是运动场&quot;&gt;&lt;a href=&quot;#adidas-哪里都是运动场&quot; class=&quot;headerlink&quot; title=&quot;adidas,哪里都是运动场&quot;&gt;&lt;/a&gt;adidas,哪里都是运动场&lt;/h1&gt;&lt;p&gt;2014年冬季,阿迪达斯训练带来新一季冬季单品,将高科技面料与时尚亮眼撞色完美结合,以“哪里都是运动场”为主题,引领全新城市运动精神。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/work/adidas/0.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器应用之-svn构建</title>
+    <link href="http://www.taoring.com/2016/10/18/server001/"/>
+    <id>http://www.taoring.com/2016/10/18/server001/</id>
+    <published>2016-10-18T15:33:21.000Z</published>
+    <updated>2016-10-18T16:04:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.<br>svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?<br>自己一直对command式的也非常好奇,现在test并记录<br><a id="more"></a></p>
+<h1 id="svn服务器原理"><a href="#svn服务器原理" class="headerlink" title="svn服务器原理"></a>svn服务器原理</h1><p>首先咱们不懂,先了解下,svn服务器的原理,对于很多初手或者学习者需要理解配合的深刻含义，这种提高项目效率的同时也是在互相进步</p>
+<p><a href="https://my.oschina.net/1462469/blog/267035" target="_blank" rel="external">翻他牌</a></p>
+<p>那么我最初是在何时接触svn的呢,那是在2007年的,当时用的还是vs2005的vss2005版本,与几个后端配合提交版本,只不过,我提交的是设计稿及html+css样式+js<br>这时才发现前后端分离是多么的方便,至少前后配合初型已经是这样子<br>对于svn服务器理解可以看如下图:<br><img src="/images/assets/2.png" alt=""><br>简单的表述,一台server(任何一台电脑,只要硬件可以作为服务器)<br>那么这边有3台,A,B,C,从server提交又获取,使得这三台,可以在server上获取其他二台提交的一些信息,另外还可以版本比较merge合并,很神奇的东西</p>
+<h1 id="系统环境选择svn搭建"><a href="#系统环境选择svn搭建" class="headerlink" title="系统环境选择svn搭建"></a>系统环境选择svn搭建</h1><p>首先看一下,自己系统是什么,window还是mac os,</p>
+<h3 id="mac-os"><a href="#mac-os" class="headerlink" title="mac os"></a>mac os</h3><p>还好,mac自带svn服务器端,这样我们可省一些安装及配置,打开终端或IDE上terminal,我这边是webstorm</p>
+<p>第一步,初始化svn服务器,因为mac自带,已经装好了,就不需要我们再下载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ svnadmin create 自定义svn服务器名称</div></pre></td></tr></table></figure>
+<p>第二步,找到路径 自定义svn服务器文件夹 &gt; conf &gt; svnserve.conf文件内,去掉前面的#</p>
+<blockquote>
+<p>anon-access = read<br>auth-access = write<br>password-db = passwd<br>authz-db = authz</p>
+</blockquote>
+<p>anon-access 表示匿名访问权限<br>anon-access = none代表禁止匿名访问，需要帐号密码才能访问<br><img src="/images/assets/3.png" alt=""><br>第三步,conf &gt;passwd文件,在[users]后面加zyx=123456，表示创建了zyx帐户，密码是123456<br>如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[users]</div><div class="line"># harry = harryssecret</div><div class="line"># sally = sallyssecret</div><div class="line">xyz=123456</div></pre></td></tr></table></figure></p>
+<p>第四步,conf &gt;authz文件</p>
+<p>passwd用户xyz加到 =&gt; jackgroup创建用户组，</p>
+<p>如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jackgroup=xyz</div></pre></td></tr></table></figure></p>
+<p>第五步,conf&gt;authz文件 ,组权限设置<br>rw读写权限，[/]表示根目录</p>
+<p>如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@jackgroup=rw</div></pre></td></tr></table></figure></p>
+<p>第六步,开启svn服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ svnserver -d -r 自定义svn服务器</div></pre></td></tr></table></figure></p>
+<p>整个svn服务器已经部署完,那么你可以用小乌龟TortoiseSVN下下看,本地用svn://localhost开头,如果你真的是一台服务器,有固定IP地址,那么可以是svn://192.168.1.2这种,是不是我们以前看到后端给到的svn地址?<br>哦,原来是这样,好神奇,我们自己电脑也可以作服务器<br>那我这边用的是versions,mac版的svn下载</p>
+<p>开始启后,打开活动监测器,搜索svnserve进程,能搜索的到,说明开启成功<br><img src="/images/assets/4.png" alt=""></p>
+<h3 id="接下来-使用command式客户端"><a href="#接下来-使用command式客户端" class="headerlink" title="接下来,使用command式客户端"></a>接下来,使用command式客户端</h3><p>将weibo所有内容,上传到服务器svn仓库weibo目录下,引号中的内容是注释说明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ svn import weibo svn://localhost/svn/weibo --username=xyz --password=123456 -m &quot;初始化导入&quot;</div></pre></td></tr></table></figure>
+<p>若出现Authorization failed问题：<br>解决:</p>
+<ul>
+<li>在conf&gt;authz文件内，加入[/]代表根目录下所有的资源</li>
+</ul>
+<h3 id="从服务器端下载代码到客户端本地"><a href="#从服务器端下载代码到客户端本地" class="headerlink" title="从服务器端下载代码到客户端本地"></a>从服务器端下载代码到客户端本地</h3><p>svn checkout svn://localhost/svn/weibo –username=xyz –password=123456 /weibo</p>
+<p>签下，到当前目录到 /weibo</p>
+<p>用工具Versions也可以,类似,小乌龟视图界面下载</p>
+<p><img src="/images/assets/5.png" alt=""></p>
+<h3 id="提交更改过的代码到服务器"><a href="#提交更改过的代码到服务器" class="headerlink" title="提交更改过的代码到服务器"></a>提交更改过的代码到服务器</h3><p>添加<br>svn add 文件/文件夹</p>
+<p>更改<br>svn commit -m “修改了main.m文件”</p>
+<p>出现问题时：<br>The log message is a pathname (was -F intended?); use ‘–force-log’ to override<br>解决方法：</p>
+<ul>
+<li>svn  ci 提交文件 -m “改变新描述”</li>
+</ul>
+<h3 id="更新服务器端的代码到客户端"><a href="#更新服务器端的代码到客户端" class="headerlink" title="更新服务器端的代码到客户端"></a>更新服务器端的代码到客户端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ svn update</div></pre></td></tr></table></figure>
+<p>其他方法查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ svn ?</div></pre></td></tr></table></figure></p>
+<h3 id="不想用了-就关闭svn服务器"><a href="#不想用了-就关闭svn服务器" class="headerlink" title="不想用了,就关闭svn服务器"></a>不想用了,就关闭svn服务器</h3><p>先找pid,这是进程的序号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ps -e | grep svnserve</div></pre></td></tr></table></figure></p>
+<p>关闭pid<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ kill pid是数字</div></pre></td></tr></table></figure></p>
+<p>若出现No such process,那说明没找到进程序号</p>
+<p>或者直接killall svnserve,也可以</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有人听到svn服务器,感觉很高深的东西,其实慢慢了解如何运作,你就不会特别的困惑,也不会觉得难用.&lt;br&gt;svn服务器的搭建与客户端的command式的操作,视图软件有时会让你的IDE,down机,或假死,那么command式相对而言好些,你听说过,dos有死机的?&lt;br&gt;自己一直对command式的也非常好奇,现在test并记录&lt;br&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://www.taoring.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="svn" scheme="http://www.taoring.com/tags/svn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遇到哪些事儿之—百事挑赞</title>
+    <link href="http://www.taoring.com/2016/10/17/work001/"/>
+    <id>http://www.taoring.com/2016/10/17/work001/</id>
+    <published>2016-10-16T16:33:52.000Z</published>
+    <updated>2016-10-17T04:18:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="百事可乐-百事挑赞"><a href="#百事可乐-百事挑赞" class="headerlink" title="百事可乐,百事挑赞"></a>百事可乐,百事挑赞</h1><p>针对现时尚年轻人喜欢玩的创意,与明星挑赞的互动,landingpage<br><img src="/images/work/pepsi/0.gif" alt=""></p>
+<a id="more"></a>
+<p>大家对HTML5,新标签canvas,并不陌生,自从新的定义一出来,大家都从flash时代转向html5时代,而对我们来说也如此,哪些能解决当下的问题,就选择当下的技术,去试验,实用,以及优化,再迭代<br>在互动行业，所认知的技术就是比较与游戏有点类似,又有区别,这里就不在讨论,<br>flash做动画世人皆知,而且flash依靠as3+flashplayer舞台展现给大家，但是最终adobe没能把fp,移到ios端,变想升级了adobe cc导出html5的素材资源与脚本<br>w3c推出新定义 ,html5标签的canvas,也解决了手机端这个痛点</p>
+<h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><ul>
+<li>手机端是解决了,但接下来就是手机不只一种系统,有android,ios,主流的,其他先暂时不去讨论</li>
+<li>android有低版本,对于是否支持webgl,这是一个痛点</li>
+<li>对于当时我手机还是ip4的时候,系统还有ios7系统的就不支持webl</li>
+<li>官方更新ios8版本才支持</li>
+</ul>
+<h3 id="概述下webgl"><a href="#概述下webgl" class="headerlink" title="概述下webgl"></a>概述下webgl</h3><p>他与早期flash时代开发,所用的gpu类似,硬件加速,那怎么加速呢?依靠借用显卡内存,玩过flash的人都知道,3d,2.5d,要达到fps40以上,所需要考虑的</p>
+<h3 id="互动展示"><a href="#互动展示" class="headerlink" title="互动展示"></a>互动展示</h3><p><img src="/images/work/pepsi/0.gif" alt=""><br>手机端有陀螺仪,平衡仪功能<br><img src="/images/work/pepsi/0.png" alt=""><br>动画渲染,在各种版本之间切换,是否使用webgl,canvas渲染<br><img src="/images/work/pepsi/1.png" alt=""><br>还好html5也添了一个video标签<br><img src="/images/work/pepsi/2.png" alt=""></p>
+<p><img src="/images/work/pepsi/3.png" alt=""><br>还有声音标签<br><img src="/images/work/pepsi/4.png" alt=""><br>神奇吗?一张图搞定所有动画素材,这技术是游戏的技巧,07年那时就发现了，一个偶然看某游戏的制作,后来,门户网站,垂直网站基本用一张合集图,纯手动在样式上描位置,就那css样式上background-position<br><img src="/images/work/pepsi/5.png" alt=""><br>那时可没有软件供你布局导出,还带json文件,里面描述位置xy</p>
+<p>ps:我通常用的是texturemerger,来合图</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;百事可乐-百事挑赞&quot;&gt;&lt;a href=&quot;#百事可乐-百事挑赞&quot; class=&quot;headerlink&quot; title=&quot;百事可乐,百事挑赞&quot;&gt;&lt;/a&gt;百事可乐,百事挑赞&lt;/h1&gt;&lt;p&gt;针对现时尚年轻人喜欢玩的创意,与明星挑赞的互动,landingpage&lt;br&gt;&lt;img src=&quot;/images/work/pepsi/0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那就从HelloWorld开始</title>
+    <link href="http://www.taoring.com/2016/10/15/hello-world/"/>
+    <id>http://www.taoring.com/2016/10/15/hello-world/</id>
+    <published>2016-10-14T16:36:18.000Z</published>
+    <updated>2016-10-17T04:18:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="纠结"><a href="#纠结" class="headerlink" title="纠结"></a>纠结</h2><p>blog？要不要再续博</p>
+<p>这个…</p>
+<p>跟一个技术小伙伴闲聊时,提到用hexo,说是blog神器,很热情,把他的热博link发我,我一看蛮好的,哎…,兴致来了,呵呵<br>这个对于一个已经很多年没在写blog的人来说,是有点那种久违的感觉,<br><a id="more"></a></p>
+<ul>
+<li>回忆<br>  过去有任何研究的demo都会用txt等记录,这已是一种习惯,2010之前blog倒也经常写,还用了wordpress,但后来太忙,太麻烦了,本地记录,还要发到网上,对于一个设计师来说,用git这玩意儿还不是很熟,大家可以看到我的github虽然2010注册，但一直到2015年才开始写点东西,呵呵<br><img src="/images/assets/0.png" alt=""></li>
+<li>现实<br>  找不回文件,有点石化,一次丢了电脑,一次摔了HDD,有些技术备忘录(txt),都在HDD中及电脑中,腿有点不听使唤,跪了的感觉</li>
+<li>亮了<br>  有次数据没了,还好有gitlab备份，要不然又杯具了,写些文章,其实也在锻练你的语言组织能力，及思维能力，虽然我是那种打的很多,但一说起就忘词儿的那种…</li>
+</ul>
+<h2 id="转变"><a href="#转变" class="headerlink" title="转变"></a>转变</h2><ul>
+<li>干脆就记录在网上,省的找不到,只要github不挂就成…</li>
+<li>时间挤挤总是有的</li>
+</ul>
+<h2 id="开始动手"><a href="#开始动手" class="headerlink" title="开始动手"></a>开始动手</h2><h3 id="首先-我要下载hexo程序"><a href="#首先-我要下载hexo程序" class="headerlink" title="首先,我要下载hexo程序"></a>首先,我要下载hexo程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h3 id="对hexo进行配置-如果在装hexo-cli时-已经顺带装了-那就跳过本步"><a href="#对hexo进行配置-如果在装hexo-cli时-已经顺带装了-那就跳过本步" class="headerlink" title="对hexo进行配置,如果在装hexo-cli时,已经顺带装了,那就跳过本步"></a>对hexo进行配置,如果在装hexo-cli时,已经顺带装了,那就跳过本步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo install</div></pre></td></tr></table></figure>
+<h3 id="装完后-那就开始建博客"><a href="#装完后-那就开始建博客" class="headerlink" title="装完后,那就开始建博客"></a>装完后,那就开始建博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init 博客名</div></pre></td></tr></table></figure>
+<p>目录会出现如下:<br><img src="/images/assets/1.png" alt=""></p>
+<h3 id="建立文章"><a href="#建立文章" class="headerlink" title="建立文章"></a>建立文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># hexo new 文章名</div></pre></td></tr></table></figure>
+<h3 id="文章也建了，那我们就开始改配置了"><a href="#文章也建了，那我们就开始改配置了" class="headerlink" title="文章也建了，那我们就开始改配置了"></a>文章也建了，那我们就开始改配置了</h3><ul>
+<li>主站配置文件 _config.yml<ul>
+<li>一般就修改几个属性title,subtitle,description,author,theme,language,themes</li>
+<li>关键的来了,language,这个配置要到themes/languages里面去看看,有哪些语言文件zh.yml中文版,en.yml英文版,看清了啊</li>
+<li>public_dir: 指向要生成所有静态页面 命令会后面提到$ hexo generate</li>
+<li>themes: 选择你下载的模板包文件夹名称</li>
+</ul>
+</li>
+<li>模板配置文件 themes/模板名/_config.yml<ul>
+<li>一般去掉注释#  duoshuo_shortname,duoshuo_share,menu,menu_icons,avatar</li>
+<li>menu 菜单增加</li>
+<li>menu_icons 菜单的图标</li>
+<li>avatar 右侧边栏,添加logo,直接加图片路径</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://hexo.io/docs/" target="_blank" rel="external">文档</a></p>
+<h3 id="配置好后-那就跑起来-一般会是http-localhost-4000"><a href="#配置好后-那就跑起来-一般会是http-localhost-4000" class="headerlink" title="配置好后,那就跑起来,一般会是http://localhost:4000"></a>配置好后,那就跑起来,一般会是<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h3 id="打包静态文件"><a href="#打包静态文件" class="headerlink" title="打包静态文件"></a>打包静态文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h3 id="部署路由"><a href="#部署路由" class="headerlink" title="部署路由"></a>部署路由</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h2 id="接下来用git上传-而且每次用神一样bash后-command模式提交-是不是很有成就感-呵呵"><a href="#接下来用git上传-而且每次用神一样bash后-command模式提交-是不是很有成就感-呵呵" class="headerlink" title="接下来用git上传,而且每次用神一样bash后,command模式提交,是不是很有成就感,呵呵"></a>接下来用git上传,而且每次用神一样bash后,command模式提交,是不是很有成就感,呵呵</h2><p>Good Luck</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;纠结&quot;&gt;&lt;a href=&quot;#纠结&quot; class=&quot;headerlink&quot; title=&quot;纠结&quot;&gt;&lt;/a&gt;纠结&lt;/h2&gt;&lt;p&gt;blog？要不要再续博&lt;/p&gt;
+&lt;p&gt;这个…&lt;/p&gt;
+&lt;p&gt;跟一个技术小伙伴闲聊时,提到用hexo,说是blog神器,很热情,把他的热博link发我,我一看蛮好的,哎…,兴致来了,呵呵&lt;br&gt;这个对于一个已经很多年没在写blog的人来说,是有点那种久违的感觉,&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.taoring.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="hexo" scheme="http://www.taoring.com/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
