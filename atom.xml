@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.taoring.com/"/>
-  <updated>2016-10-25T07:56:56.000Z</updated>
+  <updated>2016-10-31T15:52:14.000Z</updated>
   <id>http://www.taoring.com/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Prometheus框架之-小游戏</title>
+    <link href="http://www.taoring.com/2016/10/28/prometheusgame/"/>
+    <id>http://www.taoring.com/2016/10/28/prometheusgame/</id>
+    <published>2016-10-27T17:08:51.000Z</published>
+    <updated>2016-10-31T15:52:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>利用Canvas框架,Prometheus普罗米修斯案例,没用webgl,跑到50多fps.移动手机端,也可以跑到,合理利用资源其实也是不错的,目前没有太多的点及线,当然要完成这个游戏还是需要花点时间.</p>
+<p><img src="/images/work/prometheusgame/0.gif" alt=""></p>
+<a id="more"></a>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>目前只是地图的repeat及,飞机移动控制,子弹集合及敌机.</p>
+<ul>
+<li><p>循环地图建立<br>使用drawimage</p>
+</li>
+<li><p>设置边界<br>建立上下左右边界判断值,出去显示范围remove掉</p>
+</li>
+<li><p>子弹集合<br>用的是Array数组存放</p>
+</li>
+<li><p>碰撞检测<br>还是通过两点距离公式检测</p>
+</li>
+<li><p>移动事件<br>javascript HtmlDom监听事件<br>addEventListener<br>removeEventListener</p>
+</li>
+<li><p>离屏技术<br>复制一份canvas,放在内存中</p>
+</li>
+</ul>
+<p>小游戏项目源码开源 <a href="https://github.com/slowsay/Prometheus" target="_blank" rel="external">翻他牌</a></p>
+<p><img src="/images/work/prometheusgame/0.png" alt=""></p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul>
+<li>当你发现在render()里面跳帧,却丢帧及降帧,这是一个非常头疼的问题</li>
+<li>在渲染里面使用循环方法去repeat地图皮,再使用drawimage,那会相当的卡,直接降低fps不说,还会导致真的死机,在chrome下,点两次X,就可以关闭,不要惊慌</li>
+<li>所有元素加起来显示,5架大小飞机,子弹500点,1张地图,2个云层</li>
+</ul>
+<h2 id="粗略解决"><a href="#粗略解决" class="headerlink" title="粗略解决"></a>粗略解决</h2><p>在v0.0.8版本已经修复画地图时的卡死现象,具体看源码,或调用spritemap方法</p>
+<h2 id="参与开源"><a href="#参与开源" class="headerlink" title="参与开源"></a>参与开源</h2><p>我希望更多小伙伴加入这个prometheus开源(火种)计划，互动行业或游戏行业,这个是提高大家对于未来出现问题,解决问题的一个好机会,<br>使用最原始的方法解决最好的设计稿,</p>
+<p>减少框架容量,提高执行效率,最重要的是学会很多数学公式.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;利用Canvas框架,Prometheus普罗米修斯案例,没用webgl,跑到50多fps.移动手机端,也可以跑到,合理利用资源其实也是不错的,目前没有太多的点及线,当然要完成这个游戏还是需要花点时间.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/work/prometheusgame/0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+    
+      <category term="js" scheme="http://www.taoring.com/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>Prometheus图形渲染框架</title>
@@ -53,9 +108,9 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
-    
       <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
   </entry>
   
@@ -133,11 +188,11 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
-    
       <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
   </entry>
   
@@ -226,11 +281,11 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
-    
       <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
   </entry>
   
@@ -362,11 +417,11 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
-    
       <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
   </entry>
   
