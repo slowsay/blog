@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.taoring.com/"/>
-  <updated>2016-11-01T01:01:18.000Z</updated>
+  <updated>2016-11-02T14:50:42.000Z</updated>
   <id>http://www.taoring.com/</id>
   
   <author>
@@ -14,6 +14,95 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>由浅入深之-变量作用域与内存问题</title>
+    <link href="http://www.taoring.com/2016/11/02/aboutcache/"/>
+    <id>http://www.taoring.com/2016/11/02/aboutcache/</id>
+    <published>2016-11-02T12:55:25.000Z</published>
+    <updated>2016-11-02T14:50:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>正如ECMA里面所描述的,javascript变量是一个弱定义,对于变量的类型没有强制定义,这给大部分人开发带来一定的小麻烦,遇到一些必要的转型</p>
+<p><img src="/images/assets/cache.jpg" alt=""></p>
+<a id="more"></a>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>在javascript中,有静态变量,也有动态变量,让我们来回顾一下.</p>
+<h3 id="基本变量类型"><a href="#基本变量类型" class="headerlink" title="基本变量类型"></a>基本变量类型</h3><ul>
+<li>string</li>
+<li>number</li>
+<li>null</li>
+<li>undefined</li>
+<li>boolean</li>
+</ul>
+<p>这里的变量赋值很变态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var a=&apos;you&apos;;</div><div class="line">var b=a;</div><div class="line">b=3</div><div class="line">console.log(a,b)//you,3</div><div class="line"></div><div class="line">a -&gt; you</div><div class="line"></div><div class="line">b -&gt; you -&gt; 3</div></pre></td></tr></table></figure></p>
+<p>变态吗?呵呵,b居然是3,而且他是开辟了内存里有2个单位</p>
+<p>你还可以更变态点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var a=b=&apos;you&apos;;</div></pre></td></tr></table></figure></p>
+<h3 id="动态变量-引用类型"><a href="#动态变量-引用类型" class="headerlink" title="动态变量,引用类型"></a>动态变量,引用类型</h3><ul>
+<li>object<br>在这里我们发现,我们经常用到的json数据格式就是引用类型object<br>那有人问,array是不是呢?<br>答案:是的<br>是引用类型，其实这些就是一个定义,有动态属性的基本都是引用类型,这样就很好理解了</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var obj=new Object();</div><div class="line">var obj0=obj;</div><div class="line">obj.name=&apos;you&apos;;</div><div class="line">console.log(obj0.name);</div></pre></td></tr></table></figure>
+<p>上面对象赋值,那是有连接性的,正如一个Prometheus框架,你要new Graphic,赋给一个对象,最好重新new一下,不然你出现的东西还是一个啊,切记!切记!记不住,你把自己切了<br>只有实战当中才能看出神奇的东西,纯看书,不行哇,练起来</p>
+<h3 id="参数变量"><a href="#参数变量" class="headerlink" title="参数变量"></a>参数变量</h3><p>一般用在函数中的形参,实参<br>形参<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function back()&#123;</div><div class="line">var n=0;</div><div class="line">return n;</div><div class="line">&#125;</div><div class="line">back()//0</div></pre></td></tr></table></figure></p>
+<p>n是调用时分配内存,完事,就回收了</p>
+<p>实参<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function back(a)&#123;</div><div class="line">return a;</div><div class="line">&#125;</div><div class="line">back()//报bug,未传参</div><div class="line">back(0);//0</div></pre></td></tr></table></figure></p>
+<h3 id="伪类变量"><a href="#伪类变量" class="headerlink" title="伪类变量"></a>伪类变量</h3><p>this下面的变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Prometheus.Graphic=function()&#123;</div><div class="line">    this.name=&apos;you&apos;;//默认值</div><div class="line">&#125;</div><div class="line">var obj=new Prometheus.Graphic();</div><div class="line">console.log(obj.name)//you</div></pre></td></tr></table></figure>
+<h3 id="变量检测类型"><a href="#变量检测类型" class="headerlink" title="变量检测类型"></a>变量检测类型</h3><p>有instanceof 与typeof</p>
+<p>typeof 识别变量类型</p>
+<p>instanceof 用原型链来识别判断该对象是不是某一类型</p>
+<p>所以是不是很明显,两者各有分工的含义</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>在某一个区域内,可以操作引用的变量或对象,你可以把他想像成,政府机构里面做办公室的公务员好了<br>大头肯定归上面管,小头归大头区域管<br>这里就出现一个全局与局部,这两理解应该不难<br>刚才提到函数内的变量分配后,会自动回收,利用这一个机制,就有所谓的闭包方法了,虽然看上去代码不是很好看,但管用</p>
+<ul>
+<li>arguments<br>为什么要提这个呢,实参对象的引用,其实这个是一个非常好用的作用域变量,对于玩过flash as3开发者来说,不陌生,这玩意儿可以解除事件监听哇<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function pp()&#123;</div><div class="line">console.log(arguments.length);</div><div class="line">&#125;</div><div class="line">pp(0,0,0);//3</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>神奇吗?要相信,还能这种机制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function pp()&#123;</div><div class="line">var p=&apos;ok&apos;;</div><div class="line">    function kk()&#123;</div><div class="line">    var w=p;</div><div class="line">    var p=&apos;ok&apos;;</div><div class="line">    var k=&apos;you&apos;;</div><div class="line">    console.log(w,p,k);//undefined,ok,you</div><div class="line">    &#125;</div><div class="line">    console.log(w,p,k);//undefined,ok,undefined</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个就是一个复杂的嵌套函数,测试作用域,有些未定义直接报undefined,一般最好直接||某个值或字符串,以确保,让你通过,不然上传某个项目,不能执行下去,这就丢大了</p>
+<ul>
+<li>callee<br>引用当前正在执行的函数</li>
+</ul>
+<h3 id="延长作用域"><a href="#延长作用域" class="headerlink" title="延长作用域"></a>延长作用域</h3><p>location.href大家不陌生吧,在原生里面去看的时候发现 是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function geturl() &#123;</div><div class="line">        with (location) &#123;</div><div class="line">            var url = href + &apos;?id=0&apos;;</div><div class="line">        &#125;</div><div class="line">        return url;</div><div class="line">    &#125;</div><div class="line">console.log(geturl());</div></pre></td></tr></table></figure></p>
+<p>是不是不可思议,居然是这样的写法<br>这里with的作用就是接收location对象,{包含location所有方法}<br>变态一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var index = &#123;</div><div class="line">        render: function () &#123;</div><div class="line">            return &apos;ok&apos;;</div><div class="line">        &#125;, init: function () &#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    function geturl() &#123;</div><div class="line">        with (index) &#123;</div><div class="line">            var url = render() + &apos;?id=0&apos;;</div><div class="line">        &#125;</div><div class="line">        return url;</div><div class="line">    &#125;</div><div class="line">    console.log(geturl());</div></pre></td></tr></table></figure></p>
+<h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><p>javascript是自动回收机制,与as3类似,但是回收时,清的不干净那就增加内存了</p>
+<ul>
+<li><p>标签<br>回收机制会给每个变量加上一个标签,就跟你名字一样,你要是拿了东西跑了,或者吃完就拉,虽然东西没了,但你人还在,只有把你干掉,才算不占资源,这…你懂的吧,呵呵</p>
+</li>
+<li><p>计数<br>这个贴了标签,下次再来,他又重新给一个标签,这就是计数,通常用到setimeout及setinterval就会感觉到,<br>跑着跑着,怎么越来越慢,fps越来越小,因为他已经计的已经超int类型值范围了</p>
+</li>
+<li><p>标记清除<br>清除是这个内存最手动的一步,因为这个没有办法,有些对象,你不手动定义,回收机制得不到指令,也是无奈的,所以在写代码时,如果要清,请给对象加null</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function aa()&#123;</div><div class="line">var a=&apos;ok&apos;;</div><div class="line">&#125;</div><div class="line">aa();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>执行完,a变量自动随着时间间隔被回收,并清除内存单元</p>
+<ul>
+<li><p>回收<br>据历史遗留问题ie6回收机制是根据内存分配量而运行的,比较坑,而且是超过256个变量,4000多个对象或数组元素,容量达64KB才,分配内存进行回收，<br>对于回收机制,浏览器其实也有接口预留的<br>flash 中的GC()<br>ie中的collectGrarbage()<br>opera中的opera.collect()</p>
+</li>
+<li><p>管理<br>据各官方浏览器报,都是分配给浏览器很少的内存使用,以免真死机,可以去尝试一下死循环,呵呵</p>
+</li>
+<li><p>解除引用<br>在不用对象或变量时,最好设置null,这个符合回收机制的指令,会搜索所有带null的,真的清除内存单元</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj=new Ojbect();</div><div class="line">obj.name=&apos;ok&apos;;</div><div class="line">console.log(obj);</div><div class="line">obj=null</div><div class="line">console.log(obj);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>总结:变量定义,函数定义,这些写的代码最终还是要用之取之删之,才能不浪费资源及性能,做好最基础的一步,上层建筑才有望搭建哇!共勉!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;正如ECMA里面所描述的,javascript变量是一个弱定义,对于变量的类型没有强制定义,这给大部分人开发带来一定的小麻烦,遇到一些必要的转型&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/assets/cache.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="http://www.taoring.com/tags/javascript/"/>
+    
+      <category term="内存" scheme="http://www.taoring.com/tags/%E5%86%85%E5%AD%98/"/>
+    
+      <category term="优化" scheme="http://www.taoring.com/tags/%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Prometheus框架之-小游戏</title>
@@ -141,9 +230,9 @@
       <category term="随笔" scheme="http://www.taoring.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
-    
       <category term="前端" scheme="http://www.taoring.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
       <category term="flash" scheme="http://www.taoring.com/tags/flash/"/>
     

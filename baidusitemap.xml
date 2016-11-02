@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://www.taoring.com/2016/11/02/aboutcache/</loc>
+    <lastmod>2016-11-02T14:50:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>由浅入深之-变量作用域与内存问题</title>
+        <pubTime>2016-11-02T12:55:25.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>内存</tag>
+         
+        <tag>优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.taoring.com/2016/10/28/prometheusgame/</loc>
     <lastmod>2016-11-01T01:01:18.000Z</lastmod>
     <data>
@@ -57,9 +81,9 @@
         <title>做的不是技术,是情怀</title>
         <pubTime>2016-10-21T03:56:33.000Z</pubTime>
         
-        <tag>互动</tag>
-         
         <tag>前端</tag>
+         
+        <tag>互动</tag>
          
         <tag>flash</tag>
          
