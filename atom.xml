@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.taoring.com/"/>
-  <updated>2016-11-02T14:50:42.000Z</updated>
+  <updated>2016-11-21T06:12:49.000Z</updated>
   <id>http://www.taoring.com/</id>
   
   <author>
@@ -16,11 +16,135 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一个变量引发的一场知识海洋</title>
+    <link href="http://www.taoring.com/2016/11/16/jsprocess/"/>
+    <id>http://www.taoring.com/2016/11/16/jsprocess/</id>
+    <published>2016-11-16T15:41:25.000Z</published>
+    <updated>2016-11-21T06:12:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>很多作者写框架及架构时,都是在实战中获得验证,得出某个特定的结论，在一个知识海洋中,有认证,认据,反认证等等是一个循环体.<br>从一个简单的框架,集成各种功能,变的越来越复杂,要维护这些也就趋向一种,能看的懂的文档,而这种活,那是倍增的劳动力.<br>所以当你看到一个框架时,请吸取他的精华,并分享自己观点,在达到一程度时可以帮助其完善,一种github精神.<br>当我每次去上课时,老师讲的是基础理论,在消化老师讲的内容以外,可以更多实战的验证理论性知识,有时可以用多种方法合成一种或举一反三等等<br>遇到一件特别需要不按常规来处理的时候,就应该以发散思维去思考.<br>现在有大批的开发人员,就是没有做到发散思维寻找答案,还一直处于基础理论学.</p>
+<p>在我面试别人的时候,时常去看对方的作品及问作品中实质的东西,我就能大致理解其能力及是否我所需要的人</p>
+<p>前端的知识非常多,不仅仅是js,html,css,oc,android,u3d,as3等等,技术的更新非常之快,不要以井底之蛙之心态.<br>不懂可以百度,可以google,找书,人类本身是一种不断完善自我,不断创新的高级种群.相信你自己,一定可以的!</p>
+<a id="more"></a>
+<h2 id="从变量的范围开始"><a href="#从变量的范围开始" class="headerlink" title="从变量的范围开始"></a>从变量的范围开始</h2><ul>
+<li><p>局部变量<br>var 定义的是局部变量，可以销毁<br>  function(){<br>  var ok=’pp’;//局部变量<br>  }<br>  console.log(ok)//undefined</p>
+</li>
+<li><p>全局变量<br>  优势：不用强制var定义，就可以是全局变量<br>  缺点：比较混乱，在严格模式下，会报未定义（ReferenceError引用错误）</p>
+<p>   ‘use strict’;//此模式下会报undefined;<br>  function(){<br>  ok=’pp’;//此时全局变量<br>  }<br>  console.log(ok);//pp，</p>
+</li>
+</ul>
+<h2 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h2><ul>
+<li>多语句写成一行，提高可读性<br>  var a=0,b=0,c=0;</li>
+</ul>
+<h2 id="原始类型（基本类型）-简单类型————-静态数据"><a href="#原始类型（基本类型）-简单类型————-静态数据" class="headerlink" title="原始类型（基本类型）  简单类型———— 静态数据"></a>原始类型（基本类型）  简单类型———— 静态数据</h2><blockquote>
+<p>undefined,null,boolean,string,number，不容易改变数据</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a=1;</div><div class="line">var b=a;</div><div class="line">a=2;</div><div class="line">console.log(a,b);//2,1</div></pre></td></tr></table></figure>
+<ul>
+<li>undefined<br>  区分对象指针null与未初始化的变量<br>1：未定义，不存在，不占内存单元<br>2：没有被赋值,占内存单元<br>var mes;<br>console.log(mes);//undefined<br>undefined==null;//true，值一样<br>undefined===null//false，不全等，类型不一样<br>var a=’ok’;<br>(function(e){<br>  console.log(a,e);//ok,undefined<br>})();<br>(function(){<br>  console.log(a,e)//ok,未定义报bug(ReferenceError)<br>})();</li>
+</ul>
+<p>javascript有两个无：undefined,null</p>
+<p>Google公司开发的JavaScript语言,替代品Dart语言,只有null</p>
+<p>历史原因：引用c语言习惯<br>    Number(null);//0<br>    5+null;//5<br>解决：由于null是对象中的无，而数据类型没有定义，直接报bug，所以定义 了一个undefined</p>
+<p>其他：<br>C语言的NULL，Java语言的null，Python语言的None，Ruby语言的nil。</p>
+<ul>
+<li><p>null<br>  对象为空的指针<br>1：值被定义为 对象空对象指针，开辟内存单元<br>2：可以被自动回收<br>在java中，经常出现，如果null 转为数值0，不容易发现问题，所以创造出一个undefined数据判断“无”定义，原始值<br>通用：<br>  对象空<br>  原始链终点<br>Object.getPrototypeOf(Object.prototype);//null</p>
+</li>
+<li><p>boolean<br>  true/false,是值<br>  True/False只是标识符<br>  var a=’ok’;<br>  Boolean(a)//true,非空或非0</p>
+</li>
+<li><p>number<br>  1.8进制 070 //10# 56<br>  2.无效8进制 08 //10# 8<br>  3，0x十六进制 //0xff0000<br>  4.+0，-0都是0,-0<br>  5.浮点数内存 是 整数的2倍,可以用3.15e3=3150<br>  6.NaN,非数值，不是number var p; p/10; //NaN<br>  7.超过number范围1.7976931348623157e+308，就是无穷infinity<br>  8.数值转换 parseInt,parseFloat,但是true,八进制，十六进制是无法转成正常数字，</p>
+<pre><code>var a=010,b=&apos;true&apos;,c=&apos;12d3d&apos;;parseInt(a),parseInt(b),parseInt(c);//8,NaN,12
+//2,8,10,16进制
+parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10),parseInt(&apos;0xf0&apos;,16);//5,5,4,240
+</code></pre></li>
+<li>string<br>  一旦创建字符串，值是不可变内容。<br>  原理：销毁前面的值，填充新的内容值，ie7+<br>  缺点：早期版本，拼接时速度过慢<ol>
+<li>var s=’ok’;<br>s=s+’pp’;<br>//ok pp给s变量,再销毁ok，pp的内容</li>
+<li>转换字符toString();<br>//2,8,10,16进制<br>var s=10;<br>s.toString(),s.toString(2),s.toString(8),s.toString(10),s.toString(16);//‘10’,’1010’,’12’,’10’,’a’</li>
+<li>‘’+3；//字符串“3”</li>
+</ol>
+</li>
+</ul>
+<h2 id="合成类型（引用类型）-复杂类型————-动态数据"><a href="#合成类型（引用类型）-复杂类型————-动态数据" class="headerlink" title="合成类型（引用类型）  复杂类型————  动态数据"></a>合成类型（引用类型）  复杂类型————  动态数据</h2><blockquote>
+<p>object,array，容易改变数据，引用对象数组，而不是对象数组本身</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a=[1,2];</div><div class="line">var b=a;</div><div class="line">a[0]=&apos;ok&apos;;</div><div class="line">console.log(a,b);//&apos;ok&apos;,2 &apos;ok&apos;,2</div></pre></td></tr></table></figure>
+<ul>
+<li><p>object</p>
+<ol>
+<li>constructor构造函数</li>
+<li>hasOwnProperty(string)检测对象内的属性是否存在</li>
+<li>isPrototypeof(object),object是否是原型链对象<br>function pp(){}<br>var a=new pp();<br>console.log(pp.prototype.isPrototypeOf(a));//true</li>
+<li><p>var a=function(){}就是一个原型链对象<br>a.<em>proto</em> 对象属性 ，当前原型对象<br>a.constructor.prototype函数才有的属性，当前构造函数生成的原型对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//另一种原型链</div><div class="line">function pp()&#123;&#125;</div><div class="line">pp.prototype.ok=function()&#123;&#125;</div><div class="line"></div><div class="line">var a=new pp();</div><div class="line">console.log(a.__proto__,pp.prototype)//两者才一样</div></pre></td></tr></table></figure>
+</li>
+<li><p>宿主对象，BOM,DOM中的对象，有可能不继承object</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="栈内存"><a href="#栈内存" class="headerlink" title="栈内存"></a>栈内存</h2><p>优点：运行效率 &gt; 堆内存<br>缺点：空间 &lt; 堆内存<br>undefined,null,boolean,string,number地址<br>undefined,null,boolean,string,number内容<br>Object，array地址</p>
+<h2 id="堆内存"><a href="#堆内存" class="headerlink" title="堆内存"></a>堆内存</h2><p>Object，array内容</p>
+<h2 id="内存周期"><a href="#内存周期" class="headerlink" title="内存周期"></a>内存周期</h2><p>1.内存泄漏，<br>    funtction test(){var a={},b={}} 不停的引用test()，造成有些空间不回收,仍然引用计数<br>    解决：a=null,b=null，才真正回收<br>2,闭包最容易产生内存问题</p>
+<h2 id="label代码中添加标签，以便将来使用"><a href="#label代码中添加标签，以便将来使用" class="headerlink" title="label代码中添加标签，以便将来使用"></a>label代码中添加标签，以便将来使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x=0;</div><div class="line">label:if(x==0)&#123;x++,break label&#125;;</div><div class="line">console.log(x);//1</div></pre></td></tr></table></figure>
+<h2 id="arguments-callee"><a href="#arguments-callee" class="headerlink" title="arguments.callee"></a>arguments.callee</h2><p>函数自身</p>
+<h2 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function pp(n) &#123;</div><div class="line">      if (n &lt;= 0) &#123;</div><div class="line">          return n;</div><div class="line">      &#125;</div><div class="line">      else &#123;</div><div class="line">          return n + pp(n - 1);//n!2!=0+1+2</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">  //pp[0]+pp[1]+pp[2]</div><div class="line">  //0+1+2</div><div class="line">  console.log(pp(10));//55</div></pre></td></tr></table></figure>
+<h2 id="延迟脚本"><a href="#延迟脚本" class="headerlink" title="延迟脚本"></a>延迟脚本</h2><p>优点：下载完所有body内容后，再执行js脚本 ，并优先于DOMContentLoaded事件，<br>缺点：建议只包括一个延迟脚本，以免很难控制先后顺序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script defer=&apos;defer&apos; /&gt;</div><div class="line">!若不想使用延迟脚本 defer可以，把script放在&lt;/body&gt;前</div></pre></td></tr></table></figure></p>
+<h2 id="异步脚本"><a href="#异步脚本" class="headerlink" title="异步脚本"></a>异步脚本</h2><p>优点：不等待其他脚本文件，不阻塞文档呈现<br>缺点：不保证按指定，先后顺序执行，两个互相依赖就会出一些问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script async＝‘async’ src=&apos;a.js&apos; /&gt;</div><div class="line">&lt;script async＝‘async’ src=&apos;b.js&apos; /&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;很多作者写框架及架构时,都是在实战中获得验证,得出某个特定的结论，在一个知识海洋中,有认证,认据,反认证等等是一个循环体.&lt;br&gt;从一个简单的框架,集成各种功能,变的越来越复杂,要维护这些也就趋向一种,能看的懂的文档,而这种活,那是倍增的劳动力.&lt;br&gt;所以当你看到一个框架时,请吸取他的精华,并分享自己观点,在达到一程度时可以帮助其完善,一种github精神.&lt;br&gt;当我每次去上课时,老师讲的是基础理论,在消化老师讲的内容以外,可以更多实战的验证理论性知识,有时可以用多种方法合成一种或举一反三等等&lt;br&gt;遇到一件特别需要不按常规来处理的时候,就应该以发散思维去思考.&lt;br&gt;现在有大批的开发人员,就是没有做到发散思维寻找答案,还一直处于基础理论学.&lt;/p&gt;
+&lt;p&gt;在我面试别人的时候,时常去看对方的作品及问作品中实质的东西,我就能大致理解其能力及是否我所需要的人&lt;/p&gt;
+&lt;p&gt;前端的知识非常多,不仅仅是js,html,css,oc,android,u3d,as3等等,技术的更新非常之快,不要以井底之蛙之心态.&lt;br&gt;不懂可以百度,可以google,找书,人类本身是一种不断完善自我,不断创新的高级种群.相信你自己,一定可以的!&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="http://www.taoring.com/tags/javascript/"/>
+    
+      <category term="优化" scheme="http://www.taoring.com/tags/%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>改变前端的命运,react native</title>
+    <link href="http://www.taoring.com/2016/11/13/productone/"/>
+    <id>http://www.taoring.com/2016/11/13/productone/</id>
+    <published>2016-11-13T15:11:42.000Z</published>
+    <updated>2016-11-18T08:28:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="啊呀share-让前端从此可以ios原生开发-改变重新学oc技术的痛点"><a href="#啊呀share-让前端从此可以ios原生开发-改变重新学oc技术的痛点" class="headerlink" title="啊呀share,让前端从此可以ios原生开发,改变重新学oc技术的痛点"></a>啊呀share,让前端从此可以ios原生开发,改变重新学oc技术的痛点</h1><h2 id="简报"><a href="#简报" class="headerlink" title="简报"></a>简报</h2><p>是一款带有资讯,视频,技术信息的app应用,使用reactnative框架,热更新技术,开发出原生框架app应用.</p>
+<p>可以在appstore上搜索”啊呀share”,就可以下载应用<br><img src="/images/work/productone/0.gif" alt=""></p>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;啊呀share-让前端从此可以ios原生开发-改变重新学oc技术的痛点&quot;&gt;&lt;a href=&quot;#啊呀share-让前端从此可以ios原生开发-改变重新学oc技术的痛点&quot; class=&quot;headerlink&quot; title=&quot;啊呀share,让前端从此可以ios原生开发,改变重新学oc技术的痛点&quot;&gt;&lt;/a&gt;啊呀share,让前端从此可以ios原生开发,改变重新学oc技术的痛点&lt;/h1&gt;&lt;h2 id=&quot;简报&quot;&gt;&lt;a href=&quot;#简报&quot; class=&quot;headerlink&quot; title=&quot;简报&quot;&gt;&lt;/a&gt;简报&lt;/h2&gt;&lt;p&gt;是一款带有资讯,视频,技术信息的app应用,使用reactnative框架,热更新技术,开发出原生框架app应用.&lt;/p&gt;
+&lt;p&gt;可以在appstore上搜索”啊呀share”,就可以下载应用&lt;br&gt;&lt;img src=&quot;/images/work/productone/0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="reactnative" scheme="http://www.taoring.com/tags/reactnative/"/>
+    
+      <category term="oc" scheme="http://www.taoring.com/tags/oc/"/>
+    
+      <category term="ios" scheme="http://www.taoring.com/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
     <title>由浅入深之-变量作用域与内存问题</title>
     <link href="http://www.taoring.com/2016/11/02/aboutcache/"/>
     <id>http://www.taoring.com/2016/11/02/aboutcache/</id>
     <published>2016-11-02T12:55:25.000Z</published>
-    <updated>2016-11-02T14:50:42.000Z</updated>
+    <updated>2016-11-16T15:17:41.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>正如ECMA里面所描述的,javascript变量是一个弱定义,对于变量的类型没有强制定义,这给大部分人开发带来一定的小麻烦,遇到一些必要的转型</p>
 <p><img src="/images/assets/cache.jpg" alt=""></p>
@@ -58,6 +182,9 @@
 <p>神奇吗?要相信,还能这种机制</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function pp()&#123;</div><div class="line">var p=&apos;ok&apos;;</div><div class="line">    function kk()&#123;</div><div class="line">    var w=p;</div><div class="line">    var p=&apos;ok&apos;;</div><div class="line">    var k=&apos;you&apos;;</div><div class="line">    console.log(w,p,k);//undefined,ok,you</div><div class="line">    &#125;</div><div class="line">    console.log(w,p,k);//undefined,ok,undefined</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这个就是一个复杂的嵌套函数,测试作用域,有些未定义直接报undefined,一般最好直接||某个值或字符串,以确保,让你通过,不然上传某个项目,不能执行下去,这就丢大了</p>
+<p>还有一个闭包环境,这个之前好像遗留,闭包环境也是好处在于局域变量不受全局变量影响</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var test=&apos;test&apos;;</div><div class="line">(function(root)&#123;</div><div class="line">console.log(arguments.length)//1;</div><div class="line">console.log(test);//undefined</div><div class="line">var obj=&#123;name:&apos;jack&apos;&#125;</div><div class="line">var test;</div><div class="line">console.log(test);//undefined</div><div class="line">test=&apos;ok&apos;;</div><div class="line">console.log(test);//ok</div><div class="line">&#125;)(window);</div></pre></td></tr></table></figure>
+<p>这种需要自己去test,才能更了解js的多种情况,实践出真理.<br>闭包:有好处也有坏处,坏处是清不掉引用类型,导致内存泄漏</p>
 <ul>
 <li>callee<br>引用当前正在执行的函数</li>
 </ul>
@@ -80,7 +207,7 @@
 <li><p>管理<br>据各官方浏览器报,都是分配给浏览器很少的内存使用,以免真死机,可以去尝试一下死循环,呵呵</p>
 </li>
 <li><p>解除引用<br>在不用对象或变量时,最好设置null,这个符合回收机制的指令,会搜索所有带null的,真的清除内存单元</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj=new Ojbect();</div><div class="line">obj.name=&apos;ok&apos;;</div><div class="line">console.log(obj);</div><div class="line">obj=null</div><div class="line">console.log(obj);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj=new Object();</div><div class="line">obj.name=&apos;ok&apos;;</div><div class="line">console.log(obj);</div><div class="line">obj=null</div><div class="line">console.log(obj);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>总结:变量定义,函数定义,这些写的代码最终还是要用之取之删之,才能不浪费资源及性能,做好最基础的一步,上层建筑才有望搭建哇!共勉!</p>
@@ -149,11 +276,11 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
-    
       <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
       <category term="js" scheme="http://www.taoring.com/tags/js/"/>
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
   </entry>
   
@@ -195,9 +322,9 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
-    
       <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
   </entry>
   
@@ -232,9 +359,9 @@
     
       <category term="前端" scheme="http://www.taoring.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
-    
       <category term="flash" scheme="http://www.taoring.com/tags/flash/"/>
+    
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
   </entry>
   
@@ -275,11 +402,11 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
   </entry>
   
@@ -368,11 +495,11 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
   </entry>
   
@@ -402,9 +529,9 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
-    
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
   </entry>
   
@@ -504,11 +631,11 @@
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
   </entry>
   

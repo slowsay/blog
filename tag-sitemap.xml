@@ -30,13 +30,6 @@
     </url>
 
     <url>
-        <loc>http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/</loc>
-        <lastmod>2016-10-21T15:30:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.taoring.com/tags/flash/</loc>
         <lastmod>2016-10-21T15:30:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -44,8 +37,8 @@
     </url>
 
     <url>
-        <loc>http://www.taoring.com/tags/canvas/</loc>
-        <lastmod>2016-11-01T01:01:18.000Z</lastmod>
+        <loc>http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/</loc>
+        <lastmod>2016-10-21T15:30:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -65,22 +58,50 @@
     </url>
 
     <url>
-        <loc>http://www.taoring.com/tags/javascript/</loc>
-        <lastmod>2016-11-02T14:50:42.000Z</lastmod>
+        <loc>http://www.taoring.com/tags/canvas/</loc>
+        <lastmod>2016-11-01T01:01:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.taoring.com/tags/%E5%86%85%E5%AD%98/</loc>
-        <lastmod>2016-11-02T14:50:42.000Z</lastmod>
+        <lastmod>2016-11-16T15:17:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.taoring.com/tags/reactnative/</loc>
+        <lastmod>2016-11-18T08:28:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.taoring.com/tags/oc/</loc>
+        <lastmod>2016-11-18T08:28:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.taoring.com/tags/ios/</loc>
+        <lastmod>2016-11-18T08:28:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.taoring.com/tags/javascript/</loc>
+        <lastmod>2016-11-21T06:12:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.taoring.com/tags/%E4%BC%98%E5%8C%96/</loc>
-        <lastmod>2016-11-02T14:50:42.000Z</lastmod>
+        <lastmod>2016-11-21T06:12:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

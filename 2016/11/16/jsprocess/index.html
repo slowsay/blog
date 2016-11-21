@@ -1,0 +1,793 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript,优化," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="那些事儿" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="前言很多作者写框架及架构时,都是在实战中获得验证,得出某个特定的结论，在一个知识海洋中,有认证,认据,反认证等等是一个循环体.从一个简单的框架,集成各种功能,变的越来越复杂,要维护这些也就趋向一种,能看的懂的文档,而这种活,那是倍增的劳动力.所以当你看到一个框架时,请吸取他的精华,并分享自己观点,在达到一程度时可以帮助其完善,一种github精神.当我每次去上课时,老师讲的是基础理论,在消化老师讲">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个变量引发的一场知识海洋">
+<meta property="og:url" content="http://www.taoring.com/2016/11/16/jsprocess/index.html">
+<meta property="og:site_name" content="那些事儿">
+<meta property="og:description" content="前言很多作者写框架及架构时,都是在实战中获得验证,得出某个特定的结论，在一个知识海洋中,有认证,认据,反认证等等是一个循环体.从一个简单的框架,集成各种功能,变的越来越复杂,要维护这些也就趋向一种,能看的懂的文档,而这种活,那是倍增的劳动力.所以当你看到一个框架时,请吸取他的精华,并分享自己观点,在达到一程度时可以帮助其完善,一种github精神.当我每次去上课时,老师讲的是基础理论,在消化老师讲">
+<meta property="og:updated_time" content="2016-11-21T06:12:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个变量引发的一场知识海洋">
+<meta name="twitter:description" content="前言很多作者写框架及架构时,都是在实战中获得验证,得出某个特定的结论，在一个知识海洋中,有认证,认据,反认证等等是一个循环体.从一个简单的框架,集成各种功能,变的越来越复杂,要维护这些也就趋向一种,能看的懂的文档,而这种活,那是倍增的劳动力.所以当你看到一个框架时,请吸取他的精华,并分享自己观点,在达到一程度时可以帮助其完善,一种github精神.当我每次去上课时,老师讲的是基础理论,在消化老师讲">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.taoring.com/2016/11/16/jsprocess/"/>
+
+
+  <title> 一个变量引发的一场知识海洋 | 那些事儿 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">那些事儿</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一种网络记述</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-board">
+          <a href="/board" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-edit"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                一个变量引发的一场知识海洋
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-16T23:41:25+08:00" content="2016-11-16">
+              2016-11-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/16/jsprocess/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/16/jsprocess/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>很多作者写框架及架构时,都是在实战中获得验证,得出某个特定的结论，在一个知识海洋中,有认证,认据,反认证等等是一个循环体.<br>从一个简单的框架,集成各种功能,变的越来越复杂,要维护这些也就趋向一种,能看的懂的文档,而这种活,那是倍增的劳动力.<br>所以当你看到一个框架时,请吸取他的精华,并分享自己观点,在达到一程度时可以帮助其完善,一种github精神.<br>当我每次去上课时,老师讲的是基础理论,在消化老师讲的内容以外,可以更多实战的验证理论性知识,有时可以用多种方法合成一种或举一反三等等<br>遇到一件特别需要不按常规来处理的时候,就应该以发散思维去思考.<br>现在有大批的开发人员,就是没有做到发散思维寻找答案,还一直处于基础理论学.</p>
+<p>在我面试别人的时候,时常去看对方的作品及问作品中实质的东西,我就能大致理解其能力及是否我所需要的人</p>
+<p>前端的知识非常多,不仅仅是js,html,css,oc,android,u3d,as3等等,技术的更新非常之快,不要以井底之蛙之心态.<br>不懂可以百度,可以google,找书,人类本身是一种不断完善自我,不断创新的高级种群.相信你自己,一定可以的!</p>
+<a id="more"></a>
+<h2 id="从变量的范围开始"><a href="#从变量的范围开始" class="headerlink" title="从变量的范围开始"></a>从变量的范围开始</h2><ul>
+<li><p>局部变量<br>var 定义的是局部变量，可以销毁<br>  function(){<br>  var ok=’pp’;//局部变量<br>  }<br>  console.log(ok)//undefined</p>
+</li>
+<li><p>全局变量<br>  优势：不用强制var定义，就可以是全局变量<br>  缺点：比较混乱，在严格模式下，会报未定义（ReferenceError引用错误）</p>
+<p>   ‘use strict’;//此模式下会报undefined;<br>  function(){<br>  ok=’pp’;//此时全局变量<br>  }<br>  console.log(ok);//pp，</p>
+</li>
+</ul>
+<h2 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h2><ul>
+<li>多语句写成一行，提高可读性<br>  var a=0,b=0,c=0;</li>
+</ul>
+<h2 id="原始类型（基本类型）-简单类型————-静态数据"><a href="#原始类型（基本类型）-简单类型————-静态数据" class="headerlink" title="原始类型（基本类型）  简单类型———— 静态数据"></a>原始类型（基本类型）  简单类型———— 静态数据</h2><blockquote>
+<p>undefined,null,boolean,string,number，不容易改变数据</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a=1;</div><div class="line">var b=a;</div><div class="line">a=2;</div><div class="line">console.log(a,b);//2,1</div></pre></td></tr></table></figure>
+<ul>
+<li>undefined<br>  区分对象指针null与未初始化的变量<br>1：未定义，不存在，不占内存单元<br>2：没有被赋值,占内存单元<br>var mes;<br>console.log(mes);//undefined<br>undefined==null;//true，值一样<br>undefined===null//false，不全等，类型不一样<br>var a=’ok’;<br>(function(e){<br>  console.log(a,e);//ok,undefined<br>})();<br>(function(){<br>  console.log(a,e)//ok,未定义报bug(ReferenceError)<br>})();</li>
+</ul>
+<p>javascript有两个无：undefined,null</p>
+<p>Google公司开发的JavaScript语言,替代品Dart语言,只有null</p>
+<p>历史原因：引用c语言习惯<br>    Number(null);//0<br>    5+null;//5<br>解决：由于null是对象中的无，而数据类型没有定义，直接报bug，所以定义 了一个undefined</p>
+<p>其他：<br>C语言的NULL，Java语言的null，Python语言的None，Ruby语言的nil。</p>
+<ul>
+<li><p>null<br>  对象为空的指针<br>1：值被定义为 对象空对象指针，开辟内存单元<br>2：可以被自动回收<br>在java中，经常出现，如果null 转为数值0，不容易发现问题，所以创造出一个undefined数据判断“无”定义，原始值<br>通用：<br>  对象空<br>  原始链终点<br>Object.getPrototypeOf(Object.prototype);//null</p>
+</li>
+<li><p>boolean<br>  true/false,是值<br>  True/False只是标识符<br>  var a=’ok’;<br>  Boolean(a)//true,非空或非0</p>
+</li>
+<li><p>number<br>  1.8进制 070 //10# 56<br>  2.无效8进制 08 //10# 8<br>  3，0x十六进制 //0xff0000<br>  4.+0，-0都是0,-0<br>  5.浮点数内存 是 整数的2倍,可以用3.15e3=3150<br>  6.NaN,非数值，不是number var p; p/10; //NaN<br>  7.超过number范围1.7976931348623157e+308，就是无穷infinity<br>  8.数值转换 parseInt,parseFloat,但是true,八进制，十六进制是无法转成正常数字，</p>
+<pre><code>var a=010,b=&apos;true&apos;,c=&apos;12d3d&apos;;parseInt(a),parseInt(b),parseInt(c);//8,NaN,12
+//2,8,10,16进制
+parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10),parseInt(&apos;0xf0&apos;,16);//5,5,4,240
+</code></pre></li>
+<li>string<br>  一旦创建字符串，值是不可变内容。<br>  原理：销毁前面的值，填充新的内容值，ie7+<br>  缺点：早期版本，拼接时速度过慢<ol>
+<li>var s=’ok’;<br>s=s+’pp’;<br>//ok pp给s变量,再销毁ok，pp的内容</li>
+<li>转换字符toString();<br>//2,8,10,16进制<br>var s=10;<br>s.toString(),s.toString(2),s.toString(8),s.toString(10),s.toString(16);//‘10’,’1010’,’12’,’10’,’a’</li>
+<li>‘’+3；//字符串“3”</li>
+</ol>
+</li>
+</ul>
+<h2 id="合成类型（引用类型）-复杂类型————-动态数据"><a href="#合成类型（引用类型）-复杂类型————-动态数据" class="headerlink" title="合成类型（引用类型）  复杂类型————  动态数据"></a>合成类型（引用类型）  复杂类型————  动态数据</h2><blockquote>
+<p>object,array，容易改变数据，引用对象数组，而不是对象数组本身</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a=[1,2];</div><div class="line">var b=a;</div><div class="line">a[0]=&apos;ok&apos;;</div><div class="line">console.log(a,b);//&apos;ok&apos;,2 &apos;ok&apos;,2</div></pre></td></tr></table></figure>
+<ul>
+<li><p>object</p>
+<ol>
+<li>constructor构造函数</li>
+<li>hasOwnProperty(string)检测对象内的属性是否存在</li>
+<li>isPrototypeof(object),object是否是原型链对象<br>function pp(){}<br>var a=new pp();<br>console.log(pp.prototype.isPrototypeOf(a));//true</li>
+<li><p>var a=function(){}就是一个原型链对象<br>a.<em>proto</em> 对象属性 ，当前原型对象<br>a.constructor.prototype函数才有的属性，当前构造函数生成的原型对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//另一种原型链</div><div class="line">function pp()&#123;&#125;</div><div class="line">pp.prototype.ok=function()&#123;&#125;</div><div class="line"></div><div class="line">var a=new pp();</div><div class="line">console.log(a.__proto__,pp.prototype)//两者才一样</div></pre></td></tr></table></figure>
+</li>
+<li><p>宿主对象，BOM,DOM中的对象，有可能不继承object</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="栈内存"><a href="#栈内存" class="headerlink" title="栈内存"></a>栈内存</h2><p>优点：运行效率 &gt; 堆内存<br>缺点：空间 &lt; 堆内存<br>undefined,null,boolean,string,number地址<br>undefined,null,boolean,string,number内容<br>Object，array地址</p>
+<h2 id="堆内存"><a href="#堆内存" class="headerlink" title="堆内存"></a>堆内存</h2><p>Object，array内容</p>
+<h2 id="内存周期"><a href="#内存周期" class="headerlink" title="内存周期"></a>内存周期</h2><p>1.内存泄漏，<br>    funtction test(){var a={},b={}} 不停的引用test()，造成有些空间不回收,仍然引用计数<br>    解决：a=null,b=null，才真正回收<br>2,闭包最容易产生内存问题</p>
+<h2 id="label代码中添加标签，以便将来使用"><a href="#label代码中添加标签，以便将来使用" class="headerlink" title="label代码中添加标签，以便将来使用"></a>label代码中添加标签，以便将来使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x=0;</div><div class="line">label:if(x==0)&#123;x++,break label&#125;;</div><div class="line">console.log(x);//1</div></pre></td></tr></table></figure>
+<h2 id="arguments-callee"><a href="#arguments-callee" class="headerlink" title="arguments.callee"></a>arguments.callee</h2><p>函数自身</p>
+<h2 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function pp(n) &#123;</div><div class="line">      if (n &lt;= 0) &#123;</div><div class="line">          return n;</div><div class="line">      &#125;</div><div class="line">      else &#123;</div><div class="line">          return n + pp(n - 1);//n!2!=0+1+2</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">  //pp[0]+pp[1]+pp[2]</div><div class="line">  //0+1+2</div><div class="line">  console.log(pp(10));//55</div></pre></td></tr></table></figure>
+<h2 id="延迟脚本"><a href="#延迟脚本" class="headerlink" title="延迟脚本"></a>延迟脚本</h2><p>优点：下载完所有body内容后，再执行js脚本 ，并优先于DOMContentLoaded事件，<br>缺点：建议只包括一个延迟脚本，以免很难控制先后顺序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script defer=&apos;defer&apos; /&gt;</div><div class="line">!若不想使用延迟脚本 defer可以，把script放在&lt;/body&gt;前</div></pre></td></tr></table></figure></p>
+<h2 id="异步脚本"><a href="#异步脚本" class="headerlink" title="异步脚本"></a>异步脚本</h2><p>优点：不等待其他脚本文件，不阻塞文档呈现<br>缺点：不保证按指定，先后顺序执行，两个互相依赖就会出一些问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script async＝‘async’ src=&apos;a.js&apos; /&gt;</div><div class="line">&lt;script async＝‘async’ src=&apos;b.js&apos; /&gt;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+            <a href="/tags/优化/" rel="tag">#优化</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/13/productone/" rel="next" title="改变前端的命运,react native">
+                <i class="fa fa-chevron-left"></i> 改变前端的命运,react native
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/16/jsprocess/"
+     data-title="一个变量引发的一场知识海洋"
+     data-content=""
+     data-url="http://www.taoring.com/2016/11/16/jsprocess/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/16/jsprocess/"
+           data-title="一个变量引发的一场知识海洋" data-url="http://www.taoring.com/2016/11/16/jsprocess/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/assets/logo.jpg"
+               alt="Jack Tao" />
+          <p class="site-author-name" itemprop="name">Jack Tao</p>
+          <p class="site-description motion-element" itemprop="description">一个对好玩的技术保持着三分种热度的坚持者,七分在想其他技术资讯的爱好者.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.taoring.com/www" target="_blank" title="site">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  site
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/slowsay" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.npmjs.com/~slowsay" target="_blank" title="npm">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  npm
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/slowsay" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://awhisper.github.io/" title="唯敬" target="_blank">唯敬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从变量的范围开始"><span class="nav-number">2.</span> <span class="nav-text">从变量的范围开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可读性"><span class="nav-number">3.</span> <span class="nav-text">可读性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原始类型（基本类型）-简单类型————-静态数据"><span class="nav-number">4.</span> <span class="nav-text">原始类型（基本类型）  简单类型———— 静态数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合成类型（引用类型）-复杂类型————-动态数据"><span class="nav-number">5.</span> <span class="nav-text">合成类型（引用类型）  复杂类型————  动态数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈内存"><span class="nav-number">6.</span> <span class="nav-text">栈内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆内存"><span class="nav-number">7.</span> <span class="nav-text">堆内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存周期"><span class="nav-number">8.</span> <span class="nav-text">内存周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#label代码中添加标签，以便将来使用"><span class="nav-number">9.</span> <span class="nav-text">label代码中添加标签，以便将来使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arguments-callee"><span class="nav-number">10.</span> <span class="nav-text">arguments.callee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归算法"><span class="nav-number">11.</span> <span class="nav-text">递归算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#延迟脚本"><span class="nav-number">12.</span> <span class="nav-text">延迟脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步脚本"><span class="nav-number">13.</span> <span class="nav-text">异步脚本</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jack Tao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"slowsay"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
