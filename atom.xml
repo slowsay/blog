@@ -110,21 +110,21 @@ parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10
   </entry>
   
   <entry>
-    <title>改变前端的命运,react native</title>
+    <title>第一个资讯类的app应用</title>
     <link href="http://www.taoring.com/2016/11/13/productone/"/>
     <id>http://www.taoring.com/2016/11/13/productone/</id>
     <published>2016-11-13T15:11:42.000Z</published>
-    <updated>2016-11-18T08:28:28.000Z</updated>
+    <updated>2016-11-21T06:25:28.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="啊呀share-让前端从此可以ios原生开发-改变重新学oc技术的痛点"><a href="#啊呀share-让前端从此可以ios原生开发-改变重新学oc技术的痛点" class="headerlink" title="啊呀share,让前端从此可以ios原生开发,改变重新学oc技术的痛点"></a>啊呀share,让前端从此可以ios原生开发,改变重新学oc技术的痛点</h1><h2 id="简报"><a href="#简报" class="headerlink" title="简报"></a>简报</h2><p>是一款带有资讯,视频,技术信息的app应用,使用reactnative框架,热更新技术,开发出原生框架app应用.</p>
-<p>可以在appstore上搜索”啊呀share”,就可以下载应用<br><img src="/images/work/productone/0.gif" alt=""></p>
+    <content type="html"><![CDATA[<h1 id="项目名称-啊呀share"><a href="#项目名称-啊呀share" class="headerlink" title="项目名称:啊呀share"></a>项目名称:啊呀share</h1><h2 id="简报"><a href="#简报" class="headerlink" title="简报"></a>简报</h2><p>是一款互联网行业资讯,创意视频,前后端技术信息为载体的app应用.</p>
+<p>可以在appstore上搜索”啊呀share”,就可以下载看资讯<br><img src="/images/work/productone/0.gif" alt=""></p>
 <a id="more"></a>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;啊呀share-让前端从此可以ios原生开发-改变重新学oc技术的痛点&quot;&gt;&lt;a href=&quot;#啊呀share-让前端从此可以ios原生开发-改变重新学oc技术的痛点&quot; class=&quot;headerlink&quot; title=&quot;啊呀share,让前端从此可以ios原生开发,改变重新学oc技术的痛点&quot;&gt;&lt;/a&gt;啊呀share,让前端从此可以ios原生开发,改变重新学oc技术的痛点&lt;/h1&gt;&lt;h2 id=&quot;简报&quot;&gt;&lt;a href=&quot;#简报&quot; class=&quot;headerlink&quot; title=&quot;简报&quot;&gt;&lt;/a&gt;简报&lt;/h2&gt;&lt;p&gt;是一款带有资讯,视频,技术信息的app应用,使用reactnative框架,热更新技术,开发出原生框架app应用.&lt;/p&gt;
-&lt;p&gt;可以在appstore上搜索”啊呀share”,就可以下载应用&lt;br&gt;&lt;img src=&quot;/images/work/productone/0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;项目名称-啊呀share&quot;&gt;&lt;a href=&quot;#项目名称-啊呀share&quot; class=&quot;headerlink&quot; title=&quot;项目名称:啊呀share&quot;&gt;&lt;/a&gt;项目名称:啊呀share&lt;/h1&gt;&lt;h2 id=&quot;简报&quot;&gt;&lt;a href=&quot;#简报&quot; class=&quot;headerlink&quot; title=&quot;简报&quot;&gt;&lt;/a&gt;简报&lt;/h2&gt;&lt;p&gt;是一款互联网行业资讯,创意视频,前后端技术信息为载体的app应用.&lt;/p&gt;
+&lt;p&gt;可以在appstore上搜索”啊呀share”,就可以下载看资讯&lt;br&gt;&lt;img src=&quot;/images/work/productone/0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     

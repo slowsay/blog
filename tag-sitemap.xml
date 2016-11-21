@@ -72,27 +72,6 @@
     </url>
 
     <url>
-        <loc>http://www.taoring.com/tags/reactnative/</loc>
-        <lastmod>2016-11-18T08:28:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.taoring.com/tags/oc/</loc>
-        <lastmod>2016-11-18T08:28:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.taoring.com/tags/ios/</loc>
-        <lastmod>2016-11-18T08:28:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.taoring.com/tags/javascript/</loc>
         <lastmod>2016-11-21T06:12:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -102,6 +81,27 @@
     <url>
         <loc>http://www.taoring.com/tags/%E4%BC%98%E5%8C%96/</loc>
         <lastmod>2016-11-21T06:12:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.taoring.com/tags/reactnative/</loc>
+        <lastmod>2016-11-21T06:25:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.taoring.com/tags/oc/</loc>
+        <lastmod>2016-11-21T06:25:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.taoring.com/tags/ios/</loc>
+        <lastmod>2016-11-21T06:25:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
