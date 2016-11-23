@@ -23,6 +23,13 @@
     </url>
 
     <url>
+        <loc>http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/</loc>
+        <lastmod>2016-10-21T15:30:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://www.taoring.com/tags/%E5%89%8D%E7%AB%AF/</loc>
         <lastmod>2016-10-21T15:30:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,8 +44,8 @@
     </url>
 
     <url>
-        <loc>http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/</loc>
-        <lastmod>2016-10-21T15:30:59.000Z</lastmod>
+        <loc>http://www.taoring.com/tags/canvas/</loc>
+        <lastmod>2016-11-01T01:01:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -52,13 +59,6 @@
 
     <url>
         <loc>http://www.taoring.com/tags/js/</loc>
-        <lastmod>2016-11-01T01:01:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.taoring.com/tags/canvas/</loc>
         <lastmod>2016-11-01T01:01:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

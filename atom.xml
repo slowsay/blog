@@ -276,11 +276,11 @@ parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
       <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
       <category term="js" scheme="http://www.taoring.com/tags/js/"/>
-    
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
   </entry>
   
@@ -322,9 +322,9 @@ parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
-    
       <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
   </entry>
   
@@ -357,11 +357,11 @@ parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10
       <category term="随笔" scheme="http://www.taoring.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
+    
       <category term="前端" scheme="http://www.taoring.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="flash" scheme="http://www.taoring.com/tags/flash/"/>
-    
-      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
   </entry>
   
@@ -402,11 +402,11 @@ parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
   </entry>
   
@@ -495,11 +495,11 @@ parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
   </entry>
   
@@ -529,9 +529,9 @@ parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
-    
       <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+    
+      <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
   </entry>
   
@@ -631,11 +631,11 @@ parseInt(&apos;0101&apos;,2),parseInt(&apos;5&apos;,8),parseInt(&apos;4&apos;,10
       <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
+      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
     
       <category term="互动" scheme="http://www.taoring.com/tags/%E4%BA%92%E5%8A%A8/"/>
     
-      <category term="canvas" scheme="http://www.taoring.com/tags/canvas/"/>
+      <category term="HTML5" scheme="http://www.taoring.com/tags/HTML5/"/>
     
   </entry>
   
