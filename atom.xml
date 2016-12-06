@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.taoring.com/"/>
-  <updated>2016-11-21T06:12:49.000Z</updated>
+  <updated>2016-12-06T14:36:30.000Z</updated>
   <id>http://www.taoring.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>地图gis魅力之-2d坐标转到3d坐标定位</title>
+    <link href="http://www.taoring.com/2016/12/06/gisearth/"/>
+    <id>http://www.taoring.com/2016/12/06/gisearth/</id>
+    <published>2016-12-06T12:44:13.000Z</published>
+    <updated>2016-12-06T14:36:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前段时间有人问到我,关于2d坐标转移到3d坐标,是不是要用投影,2d投影3d坐标会不对,现在抽了点时间处理关于2d转3d的坐标功能</p>
+<p><img src="/images/work/gis/0.jpg" alt=""></p>
+<a id="more"></a>
+<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p>3d的基本原理,可以 <a href="https://en.wikipedia.org/wiki/3D" target="_blank" rel="external">翻他牌</a><br>由于3d基本坐标x,y,z三个坐标系,一张长方形图片,贴到建立的模型上Mesh,那么为什么可以贴上去呢?那就要看vector顶点坐标的东西了,刚才的wiki已经提供</p>
+<p><img src="/images/work/gis/1.jpg" alt=""></p>
+<p>利用graphic可以在上面随意画图形,NASA官网有很多信息,还有其他免费的资源,现在国家也在不停的开放资源,天气预报,台风等信息<br><img src="/images/work/gis/2.jpg" alt=""></p>
+<p><img src="/images/work/gis/3.jpg" alt=""></p>
+<p>整个世界地图长这样<br><img src="/images/work/gis/0.png" alt=""></p>
+<p>是不是很神奇<br><img src="/images/work/gis/1.png" alt=""></p>
+<h2 id="真实的体现"><a href="#真实的体现" class="headerlink" title="真实的体现"></a>真实的体现</h2><p><img src="/images/work/gis/0.gif" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间有人问到我,关于2d坐标转移到3d坐标,是不是要用投影,2d投影3d坐标会不对,现在抽了点时间处理关于2d转3d的坐标功能&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/work/gis/0.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.taoring.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="3d" scheme="http://www.taoring.com/tags/3d/"/>
+    
+      <category term="gis" scheme="http://www.taoring.com/tags/gis/"/>
+    
+      <category term="地图map" scheme="http://www.taoring.com/tags/%E5%9C%B0%E5%9B%BEmap/"/>
+    
+  </entry>
   
   <entry>
     <title>一个变量引发的一场知识海洋</title>
